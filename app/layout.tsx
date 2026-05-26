@@ -10,6 +10,11 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "Marketeq Digital",
   description: "A website by Marketeq Digital",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
 }
 
 export default function RootLayout({

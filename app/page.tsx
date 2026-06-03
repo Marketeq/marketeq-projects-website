@@ -858,7 +858,7 @@ export default function Landing() {
 
                 <TabsContent value="Projects">
                   <div className="pt-[19.62px] lg:pt-6 relative isolate">
-                    <div className="absolute z-10 bottom-0 top-[19.62px] lg:top-6 w-[111px] right-0 bg-[linear-gradient(90deg,rgba(9,21,47,0)_0%,rgba(9,21,47,0.5)_50%,rgba(8,19,44,1)_100%)]" />
+                    <div className="absolute lg:block hidden z-10 bottom-0 top-[19.62px] lg:top-6 w-[111px] right-0 bg-[linear-gradient(90deg,rgba(9,21,47,0)_0%,rgba(9,21,47,0.5)_50%,rgba(8,19,44,1)_100%)]" />
 
                     <SwiperContent
                       spaceBetween={12}
@@ -1450,7 +1450,7 @@ export default function Landing() {
 
                 <TabsContent value="Programming, Development & IT">
                   <div className="mt-5 lg:pt-6 relative isolate">
-                    <div className="absolute z-10 bottom-0 top-0 lg:top-6 w-[109px] right-0 bg-[linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(5,11,25,0.5)_50%,rgba(5,11,25,1)_100%)]" />
+                    <div className="absolute lg:block hidden z-10 bottom-0 top-0 lg:top-6 w-[109px] right-0 bg-[linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(5,11,25,0.5)_50%,rgba(5,11,25,1)_100%)]" />
 
                     <SwiperContent
                       spaceBetween={14}
@@ -1474,7 +1474,7 @@ export default function Landing() {
                                   fill
                                 />
 
-                                <div className="size-[23.7px] lg:size-[31.75px] absolute left-[-11.85px] bottom-[-11.85px] lg:left-[-15.875px] lg:bottom-[-15.875px] inline-flex items-center justify-center bg-success-500 rounded-full border-[2.22px] lg:border-[2.72px] border-[#131314]">
+                                <div className="size-[23.7px] lg:size-[31.75px] absolute left-[-7.37px] bottom-[-7.25px] lg:left-[-9px] lg:bottom-[-8px] inline-flex items-center justify-center bg-success-500 rounded-full border-[2.22px] lg:border-[2.72px] border-[#131314]">
                                   <Check className="size-[12.26px] lg:size-[15px] border-[#131314]" />
                                 </div>
 
@@ -1483,7 +1483,7 @@ export default function Landing() {
                                   All Stars
                                 </div>
 
-                                <Favorite className="absolute fill-transparent text-white top-[10px] right-[10px]" />
+                                <Favorite className="absolute fill-transparent text-white max-lg:size-[16.35px] top-[10px] right-[10px]" />
                               </div>
 
                               <div className="mt-3">
@@ -1627,7 +1627,7 @@ export default function Landing() {
               </div>
 
               <div className="mt-[30px] lg:mt-6 relative isolate">
-                <div className="absolute z-10 inset-y-0 w-[215px] right-0 bg-[linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(5,11,25,0.5)_50%,rgba(5,11,25,1)_100%)]" />
+                <div className="absolute lg:block hidden z-10 inset-y-0 w-[215px] right-0 bg-[linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(5,11,25,0.5)_50%,rgba(5,11,25,1)_100%)]" />
 
                 <SwiperContent
                   spaceBetween={16.35}
@@ -2248,7 +2248,7 @@ export default function Landing() {
           <div className="py-10 pl-3.5 md:p-10 relative pr-0 lg:px-5 lg:py-[50px] max-w-[1420px] mx-auto border-x border-b border-primary-500/[.07]">
             <div className="relative isolate">
               <SwiperRoot className="carousel-01">
-                <div className="absolute inset-y-0 z-10 w-[509px] right-0 bg-[linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(5,11,25,0.5)_50%,rgba(5,11,25,1)_100%)]" />
+                <div className="absolute lg:block hidden inset-y-0 z-10 w-[509px] right-0 bg-[linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(5,11,25,0.5)_50%,rgba(5,11,25,1)_100%)]" />
                 <SwiperNextTrigger className="max-lg:hidden size-[75px] absolute focus-visible:outline-hidden z-10 -translate-y-1/2 top-1/2 right-[-37.5px] rounded-full shrink-0 border border-white/10 hover:border-white text-white/40 hover:text-white transition duration-300 inline-flex items-center justify-center">
                   <ChevronRight className="size-[35px]" />
                 </SwiperNextTrigger>

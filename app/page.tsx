@@ -16,10 +16,12 @@ import {
   ChevronDown,
   ChevronLeft,
   ChevronRight,
+  ChevronUp,
   Clock,
   Cloud01,
   CoinStack,
   CubeOutline,
+  File,
   File02,
   Globe,
   Instagram,
@@ -29,6 +31,7 @@ import {
   MessageSquare01,
   Monitor03,
   Plus,
+  RefreshCw,
   Rocket,
   Search,
   SearchRefraction,
@@ -37,7 +40,9 @@ import {
   Star,
   Stars02,
   Tool02,
+  User,
   UserCircle,
+  Users,
   Users03,
 } from "@blend-metrics/icons"
 import {
@@ -46,8 +51,13 @@ import {
   WordpressBrand,
 } from "@blend-metrics/icons/brands"
 import { LinkedInSolid, TwitterSolid } from "@blend-metrics/icons/social-solid"
+import * as Popover from "@radix-ui/react-popover"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
 import { SwiperSlide } from "swiper/react"
+import {
+  ArkPopoverContent,
+  ArkPopoverRoot,
+} from "@/components/ui/ark-popover/ark-popover"
 import { Facebook, Logo } from "@/components/icons"
 import { Money } from "@/components/icons"
 import { Particles } from "@/components/icons/particles"
@@ -64,8 +74,14 @@ import {
   AvatarImage,
   Badge,
   Button,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
   Favorite,
+  HeadlessRadioGroupItem,
   IconButton,
+  RadioGroup,
   ScrollArea,
   ScrollBar,
   Tabs,
@@ -122,19 +138,112 @@ const CroppedMarketeqLogo = ({
 )
 
 export default function Landing() {
+  const [areTopSkillsNotVisible, setAreTopSkillsNotVisible] =
+    React.useState(true)
+  const [areCategoriesNotVisible, setAreCategoriesNotVisible] =
+    React.useState(true)
+  const [isOpen, setIsOpen] = React.useState(false)
+
   return (
     <div className="bg-black">
+      <ArkPopoverRoot
+        open={isOpen}
+        onOpenChange={(details) => setIsOpen(details.open)}
+      >
+        <ArkPopoverContent className="bg-black min-h-[calc(100vh-56px)] overflow-y-auto scrollbar-thumb-gray-300 lg:min-h-[calc(100vh-70px)] rounded-lg px-0 before:absolute before:inset-0 before:rounded-lg before:content-[''] before:bg-primary-500/10">
+          <div className="relative p-3.5 lg:p-5">
+            <input
+              className="focus-visible:outline-none h-12 bg-transparent border-0 w-full inline-block focus:ring-0 px-3.5 py-5 text-lg lg:text-[22px] leading-none text-white/[.25]"
+              placeholder="Search by language or country"
+            />
+
+            <div className="h-12 lg:h-[52px] mt-5 rounded-[5px] flex items-center justify-between border-b border-white/20 px-3.5">
+              <div className="flex items-center gap-x-4">
+                <div className="w-[34px] shrink-0 h-[24px] bg-red-500 rounded-[4px]"></div>
+                <h1 className="text-sm lg:text-base font-bold leading-none text-white">
+                  Albania & Kosovo -{" "}
+                  <span className="font-medium">English</span>
+                </h1>
+              </div>
+
+              <Check className="size-5 text-white" />
+            </div>
+
+            <RadioGroup className="mt-5">
+              <HeadlessRadioGroupItem
+                value="India"
+                className="h-12 lg:h-[52px] cursor-pointer focus-visible:outline-none px-3.5 rounded-[5px] border border-transparent hover:border-primary-500 hover:bg-primary-500/20"
+              >
+                <div className="flex items-center gap-x-3.5">
+                  <div className="w-[34px] shrink-0 h-[24px] bg-red-500 rounded-[4px]"></div>
+                  <h1 className="text-sm lg:text-base font-bold leading-none text-white">
+                    Albania & Kosovo -{" "}
+                    <span className="font-medium">English</span>
+                  </h1>
+                </div>
+              </HeadlessRadioGroupItem>
+              <HeadlessRadioGroupItem
+                value="India"
+                className="h-12 lg:h-[52px] cursor-pointer focus-visible:outline-none px-3.5 rounded-[5px] border border-transparent hover:border-primary-500 hover:bg-primary-500/20"
+              >
+                <div className="flex items-center gap-x-3.5">
+                  <div className="w-[34px] shrink-0 h-[24px] bg-red-500 rounded-[4px]"></div>
+                  <h1 className="text-sm lg:text-base font-bold leading-none text-white">
+                    Albania & Kosovo -{" "}
+                    <span className="font-medium">English</span>
+                  </h1>
+                </div>
+              </HeadlessRadioGroupItem>
+              <HeadlessRadioGroupItem
+                value="India"
+                className="h-12 lg:h-[52px] cursor-pointer focus-visible:outline-none px-3.5 rounded-[5px] border border-transparent hover:border-primary-500 hover:bg-primary-500/20"
+              >
+                <div className="flex items-center gap-x-3.5">
+                  <div className="w-[34px] shrink-0 h-[24px] bg-red-500 rounded-[4px]"></div>
+                  <h1 className="text-sm lg:text-base font-bold leading-none text-white">
+                    Albania & Kosovo -{" "}
+                    <span className="font-medium">English</span>
+                  </h1>
+                </div>
+              </HeadlessRadioGroupItem>
+              <HeadlessRadioGroupItem
+                value="India"
+                className="h-12 lg:h-[52px] cursor-pointer focus-visible:outline-none px-3.5 rounded-[5px] border border-transparent hover:border-primary-500 hover:bg-primary-500/20"
+              >
+                <div className="flex items-center gap-x-3.5">
+                  <div className="w-[34px] shrink-0 h-[24px] bg-red-500 rounded-[4px]"></div>
+                  <h1 className="text-sm lg:text-base font-bold leading-none text-white">
+                    Albania & Kosovo -{" "}
+                    <span className="font-medium">English</span>
+                  </h1>
+                </div>
+              </HeadlessRadioGroupItem>
+            </RadioGroup>
+          </div>
+        </ArkPopoverContent>
+      </ArkPopoverRoot>
+
       <div className="min-h-screen bg-primary-500/10 isolate">
-        <div className="lg:px-[50px] 3xl:px-[100px] 4xl:px-[150px] 5xl:px-[250px]">
-          <div className="max-w-[1420px] border-y relative mx-auto justify-between items-center flex lg:px-5 py-3 pl-4 pr-2.5 md:py-2 md:px-10 lg:py-[15px] lg:border-x border-primary-500/[.07]">
+        <div
+          className="lg:px-[50px] bg-black before:content-[''] before:absolute before:inset-0 before:bg-primary-500/10 relative 3xl:px-[100px] sticky z-50 top-0 4xl:px-[150px] 5xl:px-[250px]"
+          id="header"
+        >
+          <div className="max-w-[1420px] relative border-y relative mx-auto justify-between items-center flex lg:px-5 py-3 pl-4 pr-2.5 md:py-2 md:px-10 lg:py-[15px] lg:border-x border-primary-500/[.07]">
             <div className="size-[284px] absolute opacity-[.45] top-[-106px] left-[-68px] bg-primary-500/20 blur-3xl" />
             <Logo className="w-[104.62px] lg:w-[128px] h-[15.37px] lg:h-[18.8px]" />
 
             <div className="inline-flex items-center gap-x-2 md:gap-x-3">
-              <button className="h-[31px] pl-2 pr-2.5 lg:pr-[11px] inline-flex items-center gap-x-[7px] focus-visible:outline-hidden">
+              <button
+                onClick={() => setIsOpen(true)}
+                className="h-[31px] cursor-pointer pl-2 pr-2.5 lg:pr-[11px] inline-flex items-center gap-x-[7px] focus-visible:outline-hidden"
+              >
                 <Globe className="size-5 text-white" />
                 <span className="text-white text-xs leading-none">English</span>
-                <ChevronDown className="size-4 text-white" />
+                {isOpen ? (
+                  <ChevronUp className="size-4 text-white" />
+                ) : (
+                  <ChevronDown className="size-4 text-white" />
+                )}
               </button>
               <Button
                 className="max-lg:h-8 max-lg:px-3 max-lg:text-[11px] max-lg:leading-[19.62px] max-lg:font-medium"
@@ -158,7 +267,7 @@ export default function Landing() {
           <div className="max-w-[1420px] relative lg:border-x lg:border-primary-500/[.07] mx-auto pt-10 pb-[327px] px-7 md:p-10 lg:py-[100px] lg:px-5">
             <Particles className="absolute max-md:inset-x-[21.25px] max-md:w-auto max-md:bottom-0 max-md:h-[289.89px] md:max-lg:w-[665.99px] md:max-lg:h-[475.34px] lg:max-3xl:w-[879.33px] lg:max-3xl:h-[670.8px] 3xl:max-4xl:w-[939.33px] 3xl:max-4xl:h-[670.8px] md:top-[1.92px] md:right-[17.41px] lg:top-[19.87px] lg:right-[-159.24px] 3xl:top-[51px] 4xl:top-[21px] 3xl:right-[-208.33px] 4xl:right-[-198.33px]" />
 
-            <div className="flex flex-col gap-y-10 md:gap-y-[50px]">
+            <div className="flex relative flex-col gap-y-10 md:gap-y-[50px]">
               <div className="space-y-3 md:space-y-4">
                 <div className="max-w-[880px]">
                   <h1 className="text-[42px] md:text-[54px] max-md:text-center lg:text-[68px] 3xl:text-[95px] leading-none font-bold text-white">
@@ -195,22 +304,46 @@ export default function Landing() {
                 <span className="inline-block shrink-0 h-10 w-px bg-gray-200 max-lg:hidden" />
 
                 <div className="inline-flex items-center gap-x-[11.12px] lg:gap-x-[13.6px]">
-                  <IconButton
-                    className="lg:hidden"
-                    variant="ghost"
-                    visual="gray"
-                  >
-                    <ChevronDown className="size-[15px]" />
-                  </IconButton>
-                  <Button
-                    className="max-lg:hidden"
-                    size="md"
-                    variant="ghost"
-                    type="button"
-                    visual="gray"
-                  >
-                    Projects <ChevronDown className="size-[15px]" />
-                  </Button>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <IconButton
+                        className="lg:hidden"
+                        variant="ghost"
+                        visual="gray"
+                      >
+                        <ChevronDown className="size-[15px]" />
+                      </IconButton>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuTrigger asChild>
+                      <Button
+                        className="max-lg:hidden"
+                        size="md"
+                        variant="ghost"
+                        type="button"
+                        visual="gray"
+                      >
+                        Projects <ChevronDown className="size-[15px]" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent sideOffset={13} className="w-56">
+                      <DropdownMenuItem>
+                        <Briefcase className="size-4" /> Projects
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        <RefreshCw className="size-4" /> Services
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        <Users className="size-4" /> Teams
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        <User className="size-4" /> Talent
+                      </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        <File className="size-4" /> Jobs
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+
                   <Button size="md">Search</Button>
                 </div>
               </form>
@@ -378,7 +511,7 @@ export default function Landing() {
                 Browse by category
               </h1>
               <Button
-                className="text-white group max-lg:text-xs max-lg:leading-6 max-lg:font-medium"
+                className="text-white group hover:underline transition duration-300 cursor-pointer relative max-lg:text-xs max-lg:leading-6 max-lg:font-medium"
                 variant="link"
                 visual="gray"
               >
@@ -388,8 +521,8 @@ export default function Landing() {
             </div>
 
             <div className="relative py-[12.74px] md:pr-[48px] mt-6 isolate">
-              <div className="absolute z-10 inset-y-[12.74px] w-[184px] max-lg:hidden left-0 rotate-180 bg-[linear-gradient(90deg,rgba(9,21,47,0)_0%,rgba(5,11,26,.5)_50%,rgba(5,11,27,1)_100%);]" />
-              <div className="absolute z-10 inset-y-[12.74px] w-[184px] max-md:hidden right-0 md:right-[48px] bg-[linear-gradient(90deg,rgba(9,21,47,0)_0%,rgba(5,11,26,.5)_50%,rgba(5,11,27,1)_100%);]" />
+              <div className="absolute z-10 inset-y-[12.74px] w-[184px] max-lg:hidden left-0 rotate-180 bg-[linear-gradient(90deg,rgba(9,21,47,0)_0%,rgba(5,11,26,.5)_50%,rgba(5,11,27,1)_100%)]" />
+              <div className="absolute z-10 inset-y-[12.74px] w-[184px] max-md:hidden right-0 md:right-[48px] bg-[linear-gradient(90deg,rgba(9,21,47,0)_0%,rgba(5,11,26,.5)_50%,rgba(5,11,27,1)_100%)]" />
               <SwiperRoot>
                 <SwiperContent
                   slidesPerView={2}
@@ -410,7 +543,7 @@ export default function Landing() {
                   }}
                 >
                   <SwiperSlide>
-                    <article className="rounded-lg bg-[#0A1430] border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] p-3">
+                    <article className="rounded-lg bg-[#0A1430] hover:border-primary-500 cursor-pointer transition duration-300 border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] p-3">
                       <div className="h-[132px] w-full relative overflow-hidden rounded-md">
                         <Image
                           className="object-cover"
@@ -428,7 +561,7 @@ export default function Landing() {
                     </article>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <article className="rounded-lg bg-[#0A1430] border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] p-3">
+                    <article className="rounded-lg bg-[#0A1430] hover:border-primary-500 cursor-pointer transition duration-300 border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] p-3">
                       <div className="h-[132px] w-full relative overflow-hidden rounded-md">
                         <Image
                           className="object-cover"
@@ -446,7 +579,7 @@ export default function Landing() {
                     </article>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <article className="rounded-lg bg-[#0A1430] border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] p-3">
+                    <article className="rounded-lg bg-[#0A1430] hover:border-primary-500 cursor-pointer transition duration-300 border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] p-3">
                       <div className="h-[132px] w-full relative overflow-hidden rounded-md">
                         <Image
                           className="object-cover"
@@ -464,7 +597,7 @@ export default function Landing() {
                     </article>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <article className="rounded-lg bg-[#0A1430] border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] p-3">
+                    <article className="rounded-lg bg-[#0A1430] hover:border-primary-500 cursor-pointer transition duration-300 border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] p-3">
                       <div className="h-[132px] w-full relative overflow-hidden rounded-md">
                         <Image
                           className="object-cover"
@@ -482,7 +615,7 @@ export default function Landing() {
                     </article>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <article className="rounded-lg bg-[#0A1430] border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] p-3">
+                    <article className="rounded-lg bg-[#0A1430] hover:border-primary-500 cursor-pointer transition duration-300 border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] p-3">
                       <div className="h-[132px] w-full relative overflow-hidden rounded-md">
                         <Image
                           className="object-cover"
@@ -500,7 +633,7 @@ export default function Landing() {
                     </article>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <article className="rounded-lg bg-[#0A1430] border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] p-3">
+                    <article className="rounded-lg bg-[#0A1430] hover:border-primary-500 cursor-pointer transition duration-300 border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] p-3">
                       <div className="h-[132px] w-full relative overflow-hidden rounded-md">
                         <Image
                           className="object-cover"
@@ -518,7 +651,7 @@ export default function Landing() {
                     </article>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <article className="rounded-lg bg-[#0A1430] border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] p-3">
+                    <article className="rounded-lg bg-[#0A1430] hover:border-primary-500 cursor-pointer transition duration-300 border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] p-3">
                       <div className="h-[132px] w-full relative overflow-hidden rounded-md">
                         <Image
                           className="object-cover"
@@ -536,7 +669,25 @@ export default function Landing() {
                     </article>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <article className="rounded-lg bg-[#0A1430] border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] p-3">
+                    <article className="rounded-lg bg-[#0A1430] hover:border-primary-500 cursor-pointer transition duration-300 border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] p-3">
+                      <div className="h-[132px] w-full relative overflow-hidden rounded-md">
+                        <Image
+                          className="object-cover"
+                          src="/artificial-intelligence.jpeg"
+                          alt="Artificial Intelligence"
+                          fill
+                        />
+                      </div>
+
+                      <div className="mt-3">
+                        <h1 className="text-xs font-bold leading-none text-white text-center">
+                          Machine Learning
+                        </h1>
+                      </div>
+                    </article>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <article className="rounded-lg bg-[#0A1430] hover:border-primary-500 cursor-pointer transition duration-300 border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] p-3">
                       <div className="h-[132px] w-full relative overflow-hidden rounded-md">
                         <Image
                           className="object-cover"
@@ -556,7 +707,7 @@ export default function Landing() {
                 </SwiperContent>
 
                 <div className="absolute inset-y-[13.24px] max-md:hidden right-0">
-                  <SwiperNextTrigger className="border bg-[#0A1430] shrink-0 h-full flex items-center justify-center border-primary-500/[.07] rounded-md w-9 shadow-[0px_1.51px_3.02px_0px_rgba(16,24,40,.05)]">
+                  <SwiperNextTrigger className="border cursor-pointer bg-[#0A1430] shrink-0 h-full flex items-center justify-center border-primary-500/[.07] rounded-md w-9 shadow-[0px_1.51px_3.02px_0px_rgba(16,24,40,.05)]">
                     <ChevronRight className="size-4 text-white" />
                   </SwiperNextTrigger>
                 </div>
@@ -695,42 +846,42 @@ export default function Landing() {
               </h1>
 
               <div className="mt-10 lg:mt-[50px]">
-                <Tabs defaultValue="All">
+                <Tabs defaultValue="find-a-project">
                   <TabsList className="md:max-3xl:grid max-3xl:grid-cols-4 max-3xl:gap-x-0 3xl:justify-between w-full border-primary-500/[.07]">
                     <TabsTrigger
-                      className="max-lg:text-xs max-lg:px-4 max-lg:pb-4 px-5 pb-5"
+                      className="max-lg:text-xs cursor-pointer max-lg:px-4 max-lg:pb-4 px-5 pb-5"
                       containerClassName="justify-center shrink-0"
-                      value="All"
+                      value="find-a-project"
                     >
                       <SearchIcon className="size-7 lg:size-[34px]" />
                       Find A Project
                     </TabsTrigger>
                     <TabsTrigger
-                      className="max-lg:text-xs max-lg:px-4 max-lg:pb-4 px-5 pb-5"
+                      className="max-lg:text-xs cursor-pointer max-lg:px-4 max-lg:pb-4 px-5 pb-5"
                       containerClassName="justify-center shrink-0"
-                      value="Projects"
+                      value="hire-a-team"
                     >
                       <Users03 className="size-7 lg:size-[34px]" />
                       Hire A Team
                     </TabsTrigger>
                     <TabsTrigger
-                      className="max-lg:text-xs max-lg:px-4 max-lg:pb-4 px-5 pb-5"
+                      className="max-lg:text-xs cursor-pointer max-lg:px-4 max-lg:pb-4 px-5 pb-5"
                       containerClassName="justify-center shrink-0"
-                      value="Folders"
+                      value="find-talent"
                     >
                       <UserCircle className="size-7 lg:size-[34px]" />
                       Find Talent
                     </TabsTrigger>
                     <TabsTrigger
-                      className="max-lg:text-xs max-lg:px-4 max-lg:pb-4 px-5 pb-5 shrink-0"
+                      className="max-lg:text-xs cursor-pointer max-lg:px-4 max-lg:pb-4 px-5 pb-5 shrink-0"
                       containerClassName="justify-center"
-                      value="Post a job"
+                      value="post-a-job"
                     >
                       <Briefcase className="size-7 lg:size-[34px]" />
                       Post a Job
                     </TabsTrigger>
                   </TabsList>
-                  <TabsContent value="All">
+                  <TabsContent value="find-a-project">
                     <div className="mt-10 lg:mt-[50px] 3xl:pt-[75px] relative">
                       <div className="size-[399px] absolute opacity-[.45] top-[37.5px] left-[232px] bg-primary-500/20 blur-3xl" />
                       <div className="relative grid md:grid-cols-3 gap-y-10 md:gap-x-[57px] lg:gap-x-[89px] pl-[50px] lg:px-[50px]">
@@ -795,7 +946,7 @@ export default function Landing() {
 
                       <div className="mt-10 lg:mt-[75px] relative flex items-center gap-x-6 justify-center">
                         <Button
-                          className="border-white max-lg:h-9 max-lg:px-4 max-lg:text-[13px] max-lg:gap-x-1.5 max-lg:leading-[19.62px] text-white hover:bg-primary-500 hover:text-white hover:border-primary-500 rounded-full"
+                          className="border-white cursor-pointer max-lg:h-9 max-lg:px-4 max-lg:text-[13px] max-lg:gap-x-1.5 max-lg:leading-[19.62px] text-white hover:bg-primary-500 hover:text-white hover:border-primary-500 rounded-full"
                           variant="outlined"
                           visual="gray"
                           size="xl"
@@ -803,7 +954,7 @@ export default function Landing() {
                           Start a Project
                         </Button>
                         <Button
-                          className="rounded-full max-lg:h-9 max-lg:px-4 max-lg:text-[13px] max-lg:gap-x-1.5 max-lg:leading-[19.62px] bg-white text-dark-blue-400 hover:bg-primary-500 hover:text-white"
+                          className="rounded-full cursor-pointer max-lg:h-9 max-lg:px-4 max-lg:text-[13px] max-lg:gap-x-1.5 max-lg:leading-[19.62px] bg-white text-dark-blue-400 hover:bg-primary-500 hover:text-white"
                           size="xl"
                         >
                           Browse Projects{" "}
@@ -833,13 +984,13 @@ export default function Landing() {
                 <TabsPrimitive.List className="flex items-center justify-between">
                   <div className="inline-flex items-center gap-x-[9.81px] lg:gap-x-3">
                     <TabsPrimitive.Trigger
-                      className="h-[28.44px] lg:h-[34px] border-2 border-white/40 text-white/40 hover:text-white hover:border-white data-[state=active]:text-white data-[state=active]:border-white rounded-full focus-visible:outline-hidden px-[11.44px] lg:px-3.5 text-xs lg:text-sm font-medium"
+                      className="h-[28.44px] cursor-pointer lg:h-[34px] border-2 border-white/40 text-white/40 hover:text-white hover:border-white data-[state=active]:text-white data-[state=active]:border-white rounded-full focus-visible:outline-hidden px-[11.44px] lg:px-3.5 text-xs lg:text-sm font-medium"
                       value="Projects"
                     >
                       Projects
                     </TabsPrimitive.Trigger>
                     <TabsPrimitive.Trigger
-                      className="h-[28.44px] lg:h-[34px] border-2 border-white/40 text-white/40 hover:text-white hover:border-white data-[state=active]:text-white data-[state=active]:border-white rounded-full focus-visible:outline-hidden px-[11.44px] lg:px-3.5 text-xs lg:text-sm font-medium"
+                      className="h-[28.44px] cursor-pointer lg:h-[34px] border-2 border-white/40 text-white/40 hover:text-white hover:border-white data-[state=active]:text-white data-[state=active]:border-white rounded-full focus-visible:outline-hidden px-[11.44px] lg:px-3.5 text-xs lg:text-sm font-medium"
                       value="Folders"
                     >
                       Folders
@@ -847,10 +998,10 @@ export default function Landing() {
                   </div>
 
                   <div className="inline-flex max-lg:hidden items-center gap-x-3">
-                    <SwiperPrevTrigger className="size-8 border border-white/20 rounded-full data-[state=active]:border-white data-[state=active]:text-white text-white/20 focus-visible:outline-hidden inline-flex items-center justify-center shrink-0">
+                    <SwiperPrevTrigger className="size-8 data-[state=active]:cursor-pointer border border-white/20 rounded-full data-[state=active]:border-white data-[state=active]:text-white text-white/20 focus-visible:outline-hidden inline-flex items-center justify-center shrink-0">
                       <ChevronLeft className="size-4" />
                     </SwiperPrevTrigger>
-                    <SwiperNextTrigger className="size-8 border border-white/20 rounded-full data-[state=active]:border-white data-[state=active]:text-white text-white/20 focus-visible:outline-hidden inline-flex items-center justify-center shrink-0">
+                    <SwiperNextTrigger className="size-8 data-[state=active]:cursor-pointer border border-white/20 rounded-full data-[state=active]:border-white data-[state=active]:text-white text-white/20 focus-visible:outline-hidden inline-flex items-center justify-center shrink-0">
                       <ChevronRight className="size-4" />
                     </SwiperNextTrigger>
                   </div>
@@ -872,9 +1023,9 @@ export default function Landing() {
                       {fromLength(6).map((item) => (
                         <SwiperSlide key={item}>
                           <article className="p-[16.35px] lg:p-5 bg-primary-500/5 rounded-lg border border-primary-500/[.07] shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)]">
-                            <div className="relative h-[138.24px] lg:h-[169.126px]">
+                            <div className="relative h-[138.24px] rounded-md lg:h-[169.126px] overflow-hidden">
                               <Image
-                                className="object-cover"
+                                className="object-cover transition-transform [transition-duration:3000ms] hover:scale-150 hover:rotate-3"
                                 src="/artificial-intelligence.jpeg"
                                 alt="Artificial intelligence"
                                 fill
@@ -1071,7 +1222,7 @@ export default function Landing() {
                                   </Tooltip>
                                 </TooltipProvider>
 
-                                <Favorite className="fill-transparent text-gray-500" />
+                                <Favorite className="fill-transparent cursor-pointer text-gray-500" />
                               </div>
                             </div>
                           </article>
@@ -1119,45 +1270,57 @@ export default function Landing() {
                       <div className="p-[11.44px] lg:p-3.5 inline-flex items-center bg-white/5 rounded-full">
                         <File02 className="size-[27.79px] lg:size-[34px] text-white" />
                       </div>
-                      <div className="flex items-center gap-x-[3.27px] lg:gap-x-1">
-                        <span className="text-xs lg:text-sm font-bold leading-none text-white">
+                      <Link
+                        href="#"
+                        className="flex items-center gap-x-[3.27px] lg:gap-x-1 group focus-visible:outline-none"
+                      >
+                        <span className="text-xs lg:text-sm font-bold leading-none text-white group-hover:underline transition duration-300">
                           Find A Project
                         </span>
-                        <ArrowRight className="size-[13.8px] lg:size-[17px] text-white" />
-                      </div>
+                        <ArrowRight className="size-[13.8px] lg:size-[17px] text-white group-hover:translate-x-1 transition duration-300" />
+                      </Link>
                     </div>
                     <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
                       <div className="p-[11.44px] lg:p-3.5 inline-flex items-center bg-white/5 rounded-full">
                         <Users03 className="size-[27.79px] lg:size-[34px] text-white" />
                       </div>
-                      <div className="flex items-center gap-x-[3.27px] lg:gap-x-1">
-                        <span className="text-xs lg:text-sm font-bold leading-none text-white">
+                      <Link
+                        href="#"
+                        className="flex items-center gap-x-[3.27px] lg:gap-x-1 group focus-visible:outline-none"
+                      >
+                        <span className="text-xs lg:text-sm font-bold leading-none text-white group-hover:underline transition duration-300">
                           Hire a Team
                         </span>
-                        <ArrowRight className="size-[13.8px] lg:size-[17px] text-white" />
-                      </div>
+                        <ArrowRight className="size-[13.8px] lg:size-[17px] text-white group-hover:translate-x-1 transition duration-300" />
+                      </Link>
                     </div>
                     <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
                       <div className="p-[11.44px] lg:p-3.5 inline-flex items-center bg-white/5 rounded-full">
                         <SearchRefraction className="size-[27.79px] lg:size-[34px] text-white" />
                       </div>
-                      <div className="flex items-center gap-x-[3.27px] lg:gap-x-1">
-                        <span className="text-xs lg:text-sm font-bold leading-none text-white">
+                      <Link
+                        href="#"
+                        className="flex items-center gap-x-[3.27px] lg:gap-x-1 group focus-visible:outline-none"
+                      >
+                        <span className="text-xs lg:text-sm font-bold leading-none text-white group-hover:underline transition duration-300">
                           Find Talent
                         </span>
-                        <ArrowRight className="size-[13.8px] lg:size-[17px] text-white" />
-                      </div>
+                        <ArrowRight className="size-[13.8px] lg:size-[17px] text-white group-hover:translate-x-1 transition duration-300" />
+                      </Link>
                     </div>
                     <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
                       <div className="p-[11.44px] lg:p-3.5 inline-flex items-center bg-white/5 rounded-full">
                         <CubeOutline className="size-[27.79px] lg:size-[34px] text-white" />
                       </div>
-                      <div className="flex items-center gap-x-[3.27px] lg:gap-x-1">
-                        <span className="text-xs lg:text-sm font-bold leading-none text-white">
+                      <Link
+                        href="#"
+                        className="flex items-center gap-x-[3.27px] lg:gap-x-1 group focus-visible:outline-none"
+                      >
+                        <span className="text-xs lg:text-sm font-bold leading-none text-white group-hover:underline transition duration-300">
                           Build A Project
                         </span>
-                        <ArrowRight className="size-[13.8px] lg:size-[17px] text-white" />
-                      </div>
+                        <ArrowRight className="size-[13.8px] lg:size-[17px] text-white group-hover:translate-x-1 transition duration-300" />
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -1395,60 +1558,60 @@ export default function Landing() {
               </p>
             </div>
 
-            <Tabs className="mt-5 lg:mt-[50px]" defaultValue="Projects">
+            <Tabs
+              className="mt-5 lg:mt-[50px]"
+              defaultValue="programming-development-it"
+            >
               <SwiperRoot className="introducing-carousel">
-                <TabsPrimitive.List
-                  className="flex items-center relative justify-between gap-x-6"
-                  defaultValue="Programming, Development & IT"
-                >
+                <TabsPrimitive.List className="flex items-center relative justify-between gap-x-6">
                   <div className="inline-flex scrollbar-none items-center overflow-x-auto gap-x-2.5 lg:gap-x-3">
                     <TabsPrimitive.Trigger
-                      className="h-[28.44px] whitespace-nowrap lg:h-[34px] border-2 border-white/40 text-white/40 hover:text-white hover:border-white data-[state=active]:text-white data-[state=active]:border-white rounded-full focus-visible:outline-hidden px-[11.44px] lg:px-3.5 text-xs lg:text-sm font-medium"
-                      value="Programming, Development & IT"
+                      className="h-[28.44px] cursor-pointer whitespace-nowrap lg:h-[34px] border-2 border-white/40 text-white/40 hover:text-white hover:border-white data-[state=active]:text-white data-[state=active]:border-white rounded-full focus-visible:outline-hidden px-[11.44px] lg:px-3.5 text-xs lg:text-sm font-medium"
+                      value="programming-development-it"
                     >
                       Programming, Development & IT
                     </TabsPrimitive.Trigger>
                     <TabsPrimitive.Trigger
-                      className="h-[28.44px] whitespace-nowrap lg:h-[34px] border-2 border-white/40 text-white/40 hover:text-white hover:border-white data-[state=active]:text-white data-[state=active]:border-white rounded-full focus-visible:outline-hidden px-[11.44px] lg:px-3.5 text-xs lg:text-sm font-medium"
-                      value="Business"
+                      className="h-[28.44px] cursor-pointer whitespace-nowrap lg:h-[34px] border-2 border-white/40 text-white/40 hover:text-white hover:border-white data-[state=active]:text-white data-[state=active]:border-white rounded-full focus-visible:outline-hidden px-[11.44px] lg:px-3.5 text-xs lg:text-sm font-medium"
+                      value="business"
                     >
                       Business
                     </TabsPrimitive.Trigger>
                     <TabsPrimitive.Trigger
-                      className="h-[28.44px] whitespace-nowrap lg:h-[34px] border-2 border-white/40 text-white/40 hover:text-white hover:border-white data-[state=active]:text-white data-[state=active]:border-white rounded-full focus-visible:outline-hidden px-[11.44px] lg:px-3.5 text-xs lg:text-sm font-medium"
-                      value="Design & Art"
+                      className="h-[28.44px] cursor-pointer whitespace-nowrap lg:h-[34px] border-2 border-white/40 text-white/40 hover:text-white hover:border-white data-[state=active]:text-white data-[state=active]:border-white rounded-full focus-visible:outline-hidden px-[11.44px] lg:px-3.5 text-xs lg:text-sm font-medium"
+                      value="design-art"
                     >
                       Design & Art
                     </TabsPrimitive.Trigger>
                     <TabsPrimitive.Trigger
-                      className="h-[28.44px] whitespace-nowrap lg:h-[34px] border-2 border-white/40 text-white/40 hover:text-white hover:border-white data-[state=active]:text-white data-[state=active]:border-white rounded-full focus-visible:outline-hidden px-[11.44px] lg:px-3.5 text-xs lg:text-sm font-medium"
-                      value="Sales & Marketing"
+                      className="h-[28.44px] cursor-pointer whitespace-nowrap lg:h-[34px] border-2 border-white/40 text-white/40 hover:text-white hover:border-white data-[state=active]:text-white data-[state=active]:border-white rounded-full focus-visible:outline-hidden px-[11.44px] lg:px-3.5 text-xs lg:text-sm font-medium"
+                      value="sales-marketing"
                     >
                       Sales & Marketing
                     </TabsPrimitive.Trigger>
                     <TabsPrimitive.Trigger
-                      className="h-[28.44px] whitespace-nowrap lg:h-[34px] border-2 border-white/40 text-white/40 hover:text-white hover:border-white data-[state=active]:text-white data-[state=active]:border-white rounded-full focus-visible:outline-hidden px-[11.44px] lg:px-3.5 text-xs lg:text-sm font-medium"
-                      value="Writing, Translation & Language"
+                      className="h-[28.44px] cursor-pointer whitespace-nowrap lg:h-[34px] border-2 border-white/40 text-white/40 hover:text-white hover:border-white data-[state=active]:text-white data-[state=active]:border-white rounded-full focus-visible:outline-hidden px-[11.44px] lg:px-3.5 text-xs lg:text-sm font-medium"
+                      value="writing-translation-language"
                     >
                       Writing, Translation & Language
                     </TabsPrimitive.Trigger>
-                    <button className="h-[34px] whitespace-nowrap inline-flex items-center gap-x-[5px] border-2 border-white/40 text-white/40 hover:text-white hover:border-white rounded-full focus-visible:outline-hidden px-3.5 text-sm font-medium">
+                    <button className="h-[34px] cursor-pointer whitespace-nowrap inline-flex items-center gap-x-[5px] border-2 border-white/40 text-white/40 hover:text-white hover:border-white rounded-full focus-visible:outline-hidden px-3.5 text-sm font-medium">
                       View all <ArrowRight className="size-[12.75px]" />
                     </button>
                   </div>
                   <div className="3xl:hidden max-lg:hidden right-[100px] inset-y-0 absolute w-[208px] bg-[linear-gradient(90deg,rgba(9,21,47,0)_0%,rgba(13,19,32,0.5)_50%,rgba(11,17,30,1)_100%)]" />
 
                   <div className="inline-flex items-center max-lg:hidden gap-x-3">
-                    <SwiperPrevTrigger className="size-8 border border-white/20 rounded-full data-[state=active]:border-white data-[state=active]:text-white text-white/20 focus-visible:outline-hidden inline-flex items-center justify-center shrink-0">
+                    <SwiperPrevTrigger className="size-8 data-[state=active]:cursor-pointer border border-white/20 rounded-full data-[state=active]:border-white data-[state=active]:text-white text-white/20 focus-visible:outline-hidden inline-flex items-center justify-center shrink-0">
                       <ChevronLeft className="size-4" />
                     </SwiperPrevTrigger>
-                    <SwiperNextTrigger className="size-8 border border-white/20 rounded-full data-[state=active]:border-white data-[state=active]:text-white text-white/20 focus-visible:outline-hidden inline-flex items-center justify-center shrink-0">
+                    <SwiperNextTrigger className="size-8 data-[state=active]:cursor-pointer border border-white/20 rounded-full data-[state=active]:border-white data-[state=active]:text-white text-white/20 focus-visible:outline-hidden inline-flex items-center justify-center shrink-0">
                       <ChevronRight className="size-4" />
                     </SwiperNextTrigger>
                   </div>
                 </TabsPrimitive.List>
 
-                <TabsContent value="Programming, Development & IT">
+                <TabsContent value="programming-development-it">
                   <div className="mt-5 lg:pt-6 relative isolate">
                     <div className="absolute lg:block hidden z-10 bottom-0 top-0 lg:top-6 w-[109px] right-0 bg-[linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(5,11,25,0.5)_50%,rgba(5,11,25,1)_100%)]" />
 
@@ -1465,14 +1628,16 @@ export default function Landing() {
                         <SwiperSlide key={item}>
                           <article className="border border-white/5 bg-[#091229] rounded-lg overflow-hidden shadow-[0px_2px_5px_0px_rgba(0,0,0,.04)]">
                             <div className="p-4 lg:p-5">
-                              <div className="h-[114.43px] lg:h-[140px] relative rounded-md">
-                                <Image
-                                  className="object-cover rounded-md overflow-hidden"
-                                  src="/man.jpg"
-                                  alt="Man"
-                                  sizes="25vw"
-                                  fill
-                                />
+                              <div className="h-[114.43px] lg:h-[140px] relative">
+                                <div className="rounded-md overflow-hidden relative size-full">
+                                  <Image
+                                    className="object-cover transition-transform [transition-duration:3000ms] hover:scale-150 hover:rotate-3"
+                                    src="/man.jpg"
+                                    alt="Man"
+                                    sizes="25vw"
+                                    fill
+                                  />
+                                </div>
 
                                 <div className="size-[23.7px] lg:size-[31.75px] absolute left-[-7.37px] bottom-[-7.25px] lg:left-[-9px] lg:bottom-[-8px] inline-flex items-center justify-center bg-success-500 rounded-full border-[2.22px] lg:border-[2.72px] border-[#131314]">
                                   <Check className="size-[12.26px] lg:size-[15px] border-[#131314]" />
@@ -1483,7 +1648,7 @@ export default function Landing() {
                                   All Stars
                                 </div>
 
-                                <Favorite className="absolute fill-transparent text-white max-lg:size-[16.35px] top-[10px] right-[10px]" />
+                                <Favorite className="absolute cursor-pointer fill-transparent text-white max-lg:size-[16.35px] top-[10px] right-[10px]" />
                               </div>
 
                               <div className="mt-3">
@@ -1543,44 +1708,44 @@ export default function Landing() {
                             </div>
                             <div className="p-2.5 lg:p-3 bg-white/3 flex flex-wrap gap-[7px] lg:gap-2">
                               <Link
-                                className="text-[9px] lg:text-[10px] text-gray-500 font-medium leading-5 focus-visible:outline-hidden"
+                                className="text-[9px] lg:text-[10px] hover:underline transition duration-300 text-gray-500 font-medium leading-5 focus-visible:outline-hidden"
                                 href="#"
                               >
                                 Web Development
                               </Link>
                               <Link
-                                className="text-[9px] lg:text-[10px] text-gray-500 font-medium leading-5 focus-visible:outline-hidden"
+                                className="text-[9px] lg:text-[10px] hover:underline transition duration-300 text-gray-500 font-medium leading-5 focus-visible:outline-hidden"
                                 href="#"
                               >
                                 Motion Design
                               </Link>
                               <Link
-                                className="text-[9px] lg:text-[10px] text-gray-500 font-medium leading-5 focus-visible:outline-hidden"
+                                className="text-[9px] lg:text-[10px] hover:underline transition duration-300 text-gray-500 font-medium leading-5 focus-visible:outline-hidden"
                                 href="#"
                               >
                                 Data Visualization
                               </Link>
                               <Link
-                                className="text-[9px] lg:text-[10px] text-gray-500 font-medium leading-5 focus-visible:outline-hidden"
+                                className="text-[9px] lg:text-[10px] hover:underline transition duration-300 text-gray-500 font-medium leading-5 focus-visible:outline-hidden"
                                 href="#"
                               >
                                 Information Architecture
                               </Link>
                               <Link
-                                className="text-[9px] lg:text-[10px] text-gray-500 font-medium leading-5 focus-visible:outline-hidden"
+                                className="text-[9px] lg:text-[10px] hover:underline transition duration-300 text-gray-500 font-medium leading-5 focus-visible:outline-hidden"
                                 href="#"
                               >
                                 (CRO) Design
                               </Link>
                               <Link
-                                className="text-[9px] lg:text-[10px] text-gray-500 font-medium leading-5 focus-visible:outline-hidden"
+                                className="text-[9px] lg:text-[10px] hover:underline transition duration-300 text-gray-500 font-medium leading-5 focus-visible:outline-hidden"
                                 href="#"
                               >
                                 3D Design
                               </Link>
 
                               <Button
-                                className="font-bold ml-auto text-[10px] leading-5 max-lg:text-[8px] max-lg:leading-[16.35px]"
+                                className="font-bold cursor-pointer ml-auto text-[10px] leading-5 max-lg:text-[8px] max-lg:leading-[16.35px]"
                                 variant="link"
                                 visual="gray"
                               >
@@ -1617,10 +1782,10 @@ export default function Landing() {
                 </div>
 
                 <div className="inline-flex max-lg:hidden absolute right-0 bottom-0 items-center gap-x-3">
-                  <SwiperPrevTrigger className="size-8 border border-white/20 rounded-full data-[state=active]:border-white data-[state=active]:text-white text-white/20 focus-visible:outline-hidden inline-flex items-center justify-center shrink-0">
+                  <SwiperPrevTrigger className="size-8 data-[state=active]:cursor-pointer border border-white/20 rounded-full data-[state=active]:border-white data-[state=active]:text-white text-white/20 focus-visible:outline-hidden inline-flex items-center justify-center shrink-0">
                     <ChevronLeft className="size-4" />
                   </SwiperPrevTrigger>
-                  <SwiperNextTrigger className="size-8 border border-white/20 rounded-full data-[state=active]:border-white data-[state=active]:text-white text-white/20 focus-visible:outline-hidden inline-flex items-center justify-center shrink-0">
+                  <SwiperNextTrigger className="size-8 data-[state=active]:cursor-pointer border border-white/20 rounded-full data-[state=active]:border-white data-[state=active]:text-white text-white/20 focus-visible:outline-hidden inline-flex items-center justify-center shrink-0">
                     <ChevronRight className="size-4" />
                   </SwiperNextTrigger>
                 </div>
@@ -1755,7 +1920,7 @@ export default function Landing() {
                             <div className="absolute top-0 left-0">
                               <Avatar
                                 size="2xl"
-                                className="size-[143.04px] lg:size-[175px]"
+                                className="size-[143.04px] hover:ring-0 lg:size-[175px]"
                               >
                                 <AvatarImage src="/man.jpg" alt="Man" />
                                 <AvatarFallback>M</AvatarFallback>
@@ -1782,7 +1947,7 @@ export default function Landing() {
                             <div className="absolute bottom-0 left-[30.49px] lg:left-[34.88px]">
                               <Avatar
                                 size="2xl"
-                                className="size-[85.82px] lg:size-[105px]"
+                                className="size-[85.82px] hover:ring-0 lg:size-[105px]"
                               >
                                 <AvatarImage src="/man.jpg" alt="Man" />
                                 <AvatarFallback>M</AvatarFallback>
@@ -1802,7 +1967,7 @@ export default function Landing() {
                             <div className="absolute bottom-[60.52px] lg:bottom-[74.04px] left-[147.63px] lg:left-[174.72px]">
                               <Avatar
                                 size="2xl"
-                                className="size-[85.82px] lg:size-[105px]"
+                                className="size-[85.82px] hover:ring-0 lg:size-[105px]"
                               >
                                 <AvatarImage src="/woman.jpg" alt="Man" />
                                 <AvatarFallback>M</AvatarFallback>
@@ -1988,13 +2153,13 @@ export default function Landing() {
                               </TooltipProvider>
 
                               <Button
-                                className="text-white max-lg:text-[10px] max-lg:gap-x-[5px] max-lg:gap-x-[5px]"
+                                className="text-white group cursor-pointer max-lg:text-[10px] max-lg:gap-x-[5px] max-lg:gap-x-[5px]"
                                 size="sm"
                                 variant="link"
                                 visual="gray"
                               >
                                 3 more team members{" "}
-                                <ArrowRight className="size-[12px] transition duration-300 group-hover:-translate-x-1.5" />
+                                <ArrowRight className="size-[12px] transition duration-300 group-hover:translate-x-1" />
                               </Button>
                             </div>
                           </div>
@@ -2021,7 +2186,7 @@ export default function Landing() {
 
               <div className="inline-flex items-center gap-x-5 lg:gap-x-6">
                 <Button
-                  className="max-lg:h-9 max-lg:px-4 max-lg:text-[13px] max-lg:leading-[19.62px] rounded-full border-2 hover:bg-primary-500 shadow-[0px_1px_4px_0px_rgba(0,0,0,.03)] hover:border-primary-500 border-white text-white"
+                  className="max-lg:h-9 cursor-pointer max-lg:px-4 max-lg:text-[13px] max-lg:leading-[19.62px] rounded-full border-2 hover:bg-primary-500 shadow-[0px_1px_4px_0px_rgba(0,0,0,.03)] hover:border-primary-500 border-white text-white"
                   visual="gray"
                   size="xl"
                   variant="outlined"
@@ -2029,7 +2194,7 @@ export default function Landing() {
                   Start Hiring Now
                 </Button>
                 <Button
-                  className="max-lg:h-9 max-lg:px-4 max-lg:text-[13px] max-lg:leading-[19.62px] group rounded-full hover:bg-primary-500 hover:text-white bg-white text-black shadow-[0px_1px_4px_0px_rgba(0,0,0,.03)]"
+                  className="max-lg:h-9 cursor-pointer max-lg:px-4 max-lg:text-[13px] max-lg:leading-[19.62px] group rounded-full hover:bg-primary-500 hover:text-white bg-white text-black shadow-[0px_1px_4px_0px_rgba(0,0,0,.03)]"
                   visual="gray"
                   size="xl"
                 >
@@ -2041,7 +2206,15 @@ export default function Landing() {
 
             <div className="mt-10 lg:mt-[50px]">
               <div className="relative">
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 3xl:grid-cols-5 gap-x-3 3xl:gap-x-3.5 h-[558.26px] md:h-[688px] lg:h-[755px] overflow-hidden">
+                <div
+                  className={cn(
+                    "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 3xl:grid-cols-5 gap-x-3 3xl:gap-x-3.5",
+                    {
+                      "h-[558.26px] md:h-[688px] lg:h-[755px] overflow-hidden":
+                        areTopSkillsNotVisible,
+                    }
+                  )}
+                >
                   {fromLength(5).map((item) => (
                     <div key={item} className="grid gap-y-3 3xl:gap-y-3.5">
                       <article className="rounded-lg border bg-[#091229] p-4 border-white/5 shadow-[0px_2px_5px_0px_rgba(0,0,0,.04)]">
@@ -2051,63 +2224,63 @@ export default function Landing() {
                         </h1>
                         <div className="mt-3 flex flex-col items-start">
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
                             DevOps Engineers
                           </Button>
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
                             Data Engineers
                           </Button>
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
                             Database Developers
                           </Button>
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
                             AWS Developers
                           </Button>
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
                             Distributed Systems Engineers
                           </Button>
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
                             Docker Developers
                           </Button>
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
                             Kubernetes Developers
                           </Button>
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
                             Google Cloud Developers
                           </Button>
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
@@ -2116,7 +2289,7 @@ export default function Landing() {
                         </div>
 
                         <Button
-                          className="text-white mt-3"
+                          className="text-white mt-3 cursor-pointer"
                           variant="link"
                           visual="gray"
                         >
@@ -2130,35 +2303,35 @@ export default function Landing() {
                         </h1>
                         <div className="mt-3 flex flex-col items-start">
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
                             LinkedIn API Developers
                           </Button>
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
                             Facebook API Developers
                           </Button>
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
                             API Development Specialists
                           </Button>
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
                             Shopify API Developers
                           </Button>
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
@@ -2167,7 +2340,7 @@ export default function Landing() {
                         </div>
 
                         <Button
-                          className="text-white mt-3"
+                          className="text-white mt-3 cursor-pointer"
                           variant="link"
                           visual="gray"
                         >
@@ -2181,35 +2354,35 @@ export default function Landing() {
                         </h1>
                         <div className="mt-3 flex flex-col items-start">
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
                             LinkedIn API Developers
                           </Button>
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
                             Facebook API Developers
                           </Button>
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
                             API Development Specialists
                           </Button>
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
                             Shopify API Developers
                           </Button>
                           <Button
-                            className="text-[13px] leading-6 text-white/40 hover:text-white hover:no-underline font-medium"
+                            className="text-[13px] leading-6 text-white/40 hover:text-white cursor-pointer hover:no-underline font-medium"
                             variant="link"
                             visual="gray"
                           >
@@ -2218,7 +2391,7 @@ export default function Landing() {
                         </div>
 
                         <Button
-                          className="text-white mt-3"
+                          className="text-white mt-3 cursor-pointer"
                           variant="link"
                           visual="gray"
                         >
@@ -2229,19 +2402,24 @@ export default function Landing() {
                   ))}
                 </div>
 
-                <div className="h-[362px] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(5,11,25,.5)_50%,rgba(5,11,25,1)_100%)] absolute left-0 right-0 bottom-0" />
+                {areTopSkillsNotVisible && (
+                  <div className="h-[362px] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(5,11,25,.5)_50%,rgba(5,11,25,1)_100%)] absolute left-0 right-0 bottom-0" />
+                )}
               </div>
 
-              <div className="mt-5 lg:mt-6 flex items-center justify-center">
-                <Button
-                  className="rounded-full max-lg:h-9 max-lg:py-2 max-lg:px-4 max-lg:text-[13px] max-lg:leading-[19.62px] border-2 hover:bg-primary-500 shadow-[0px_1px_4px_0px_rgba(0,0,0,.03)] hover:border-primary-500 border-white text-white"
-                  visual="gray"
-                  size="xl"
-                  variant="outlined"
-                >
-                  View more
-                </Button>
-              </div>
+              {areTopSkillsNotVisible && (
+                <div className="mt-5 lg:mt-6 flex items-center justify-center">
+                  <Button
+                    className="rounded-full cursor-pointer max-lg:h-9 max-lg:py-2 max-lg:px-4 max-lg:text-[13px] max-lg:leading-[19.62px] border-2 hover:bg-primary-500 shadow-[0px_1px_4px_0px_rgba(0,0,0,.03)] hover:border-primary-500 border-white text-white"
+                    visual="gray"
+                    size="xl"
+                    variant="outlined"
+                    onClick={() => setAreTopSkillsNotVisible(false)}
+                  >
+                    View more
+                  </Button>
+                </div>
+              )}
             </div>
           </div>
 
@@ -2249,7 +2427,7 @@ export default function Landing() {
             <div className="relative isolate">
               <SwiperRoot className="carousel-01">
                 <div className="absolute lg:block hidden inset-y-0 z-10 w-[509px] right-0 bg-[linear-gradient(90deg,rgba(0,0,0,0)_0%,rgba(5,11,25,0.5)_50%,rgba(5,11,25,1)_100%)]" />
-                <SwiperNextTrigger className="max-lg:hidden size-[75px] absolute focus-visible:outline-hidden z-10 -translate-y-1/2 top-1/2 right-[-37.5px] rounded-full shrink-0 border border-white/10 hover:border-white text-white/40 hover:text-white transition duration-300 inline-flex items-center justify-center">
+                <SwiperNextTrigger className="max-lg:hidden data-[state=active]:cursor-pointer size-[75px] absolute focus-visible:outline-hidden z-10 -translate-y-1/2 top-1/2 right-[-37.5px] rounded-full shrink-0 border border-white/10 data-[state=active]:hover:border-white text-white/40 data-[state=active]:hover:text-white transition duration-300 inline-flex items-center justify-center">
                   <ChevronRight className="size-[35px]" />
                 </SwiperNextTrigger>
 
@@ -2513,7 +2691,7 @@ export default function Landing() {
                   makes it easy to plan launch and see your project succeed.
                 </h3>
                 <Button
-                  className="bg-white max-lg:h-9 max-lg:pr-3 max-lg:gap-x-1.5 max-lg:pl-4 max-lg:text-[13px] max-lg:leading-[19.62px] text-black hover:bg-primary-500 hover:text-white rounded-full"
+                  className="bg-white cursor-pointer max-lg:h-9 max-lg:pr-3 max-lg:gap-x-1.5 max-lg:pl-4 max-lg:text-[13px] max-lg:leading-[19.62px] text-black hover:bg-primary-500 hover:text-white rounded-full"
                   size="xl"
                 >
                   Start Today{" "}
@@ -2534,38 +2712,38 @@ export default function Landing() {
               <TabsPrimitive.TabsList className="md:w-[199px] max-md:overflow-x-auto scrollbar-none lg:w-[323px] md:flex-none max-md:flex max-md:items-center gap-x-[19.62px] md:space-y-[19.62px] lg:space-y-6">
                 <TabsPrimitive.Trigger
                   value="How It Works"
-                  className="group h-[52px] max-md:shrink-0 max-md:gap-x-[81.74px] lg:h-[64px] truncate md:w-full focus-visible:outline-hidden px-5 lg:px-[25px] flex items-center justify-between text-[15px] lg:text-lg rounded-lg font-medium text-white leading-none border border-primary-500/25 shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] data-[state=active]:border-primary-500 bg-white/4"
+                  className="group data-[state=inactive]:hover:bg-white/10 transition duration-300 h-[52px] max-md:shrink-0 cursor-pointer max-md:gap-x-[81.74px] lg:h-[64px] truncate md:w-full focus-visible:outline-hidden px-5 lg:px-[25px] flex items-center justify-between text-[15px] lg:text-lg rounded-lg font-medium text-white leading-none border border-primary-500/25 shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] data-[state=active]:border-primary-500 bg-white/4"
                 >
                   How It Works{" "}
-                  <ArrowRight className="max-md:rotate-90 shrink-0 size-[18px] lg:size-6 opacity-0 group-hover:opacity-100 md:group-hover:translate-x-1.5 group-data-[state=active]:opacity-100 text-primary-500 transition duration-300" />
+                  <ArrowRight className="max-md:rotate-90 shrink-0 size-[18px] lg:size-6 opacity-0 group-hover:opacity-100 md:group-hover:translate-x-1.5 group-data-[state=active]:opacity-100 text-white/40 group-data-[state=active]:text-primary-500 transition duration-300" />
                 </TabsPrimitive.Trigger>
                 <TabsPrimitive.Trigger
                   value="Manage Your Project"
-                  className="group h-[52px] max-md:shrink-0 max-md:gap-x-[81.74px] lg:h-[64px] truncate md:w-full focus-visible:outline-hidden px-5 lg:px-[25px] flex items-center justify-between text-[15px] lg:text-lg rounded-lg font-medium text-white leading-none border border-primary-500/25 shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] data-[state=active]:border-primary-500 bg-white/4"
+                  className="group data-[state=inactive]:hover:bg-white/10 transition duration-300 h-[52px] max-md:shrink-0 cursor-pointer max-md:gap-x-[81.74px] lg:h-[64px] truncate md:w-full focus-visible:outline-hidden px-5 lg:px-[25px] flex items-center justify-between text-[15px] lg:text-lg rounded-lg font-medium text-white leading-none border border-primary-500/25 shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] data-[state=active]:border-primary-500 bg-white/4"
                 >
                   Manage Your Project{" "}
-                  <ArrowRight className="max-md:rotate-90 shrink-0 size-[18px] lg:size-6 opacity-0 group-hover:opacity-100 md:group-hover:translate-x-1.5 group-data-[state=active]:opacity-100 text-primary-500 transition duration-300" />
+                  <ArrowRight className="max-md:rotate-90 shrink-0 size-[18px] lg:size-6 opacity-0 group-hover:opacity-100 md:group-hover:translate-x-1.5 group-data-[state=active]:opacity-100 text-white/40 group-data-[state=active]:text-primary-500 transition duration-300" />
                 </TabsPrimitive.Trigger>
                 <TabsPrimitive.Trigger
                   value="Pricing & Payments"
-                  className="group h-[52px] max-md:shrink-0 max-md:gap-x-[81.74px] lg:h-[64px] truncate md:w-full focus-visible:outline-hidden px-5 lg:px-[25px] flex items-center justify-between text-[15px] lg:text-lg rounded-lg font-medium text-white leading-none border border-primary-500/25 shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] data-[state=active]:border-primary-500 bg-white/4"
+                  className="group data-[state=inactive]:hover:bg-white/10 transition duration-300 h-[52px] max-md:shrink-0 cursor-pointer max-md:gap-x-[81.74px] lg:h-[64px] truncate md:w-full focus-visible:outline-hidden px-5 lg:px-[25px] flex items-center justify-between text-[15px] lg:text-lg rounded-lg font-medium text-white leading-none border border-primary-500/25 shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] data-[state=active]:border-primary-500 bg-white/4"
                 >
                   Pricing & Payments{" "}
-                  <ArrowRight className="max-md:rotate-90 shrink-0 size-[18px] lg:size-6 opacity-0 group-hover:opacity-100 md:group-hover:translate-x-1.5 group-data-[state=active]:opacity-100 text-primary-500 transition duration-300" />
+                  <ArrowRight className="max-md:rotate-90 shrink-0 size-[18px] lg:size-6 opacity-0 group-hover:opacity-100 md:group-hover:translate-x-1.5 group-data-[state=active]:opacity-100 text-white/40 group-data-[state=active]:text-primary-500 transition duration-300" />
                 </TabsPrimitive.Trigger>
                 <TabsPrimitive.Trigger
                   value="Network & Services"
-                  className="group h-[52px] max-md:shrink-0 max-md:gap-x-[81.74px] lg:h-[64px] truncate md:w-full focus-visible:outline-hidden px-5 lg:px-[25px] flex items-center justify-between text-[15px] lg:text-lg rounded-lg font-medium text-white leading-none border border-primary-500/25 shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] data-[state=active]:border-primary-500 bg-white/4"
+                  className="group data-[state=inactive]:hover:bg-white/10 transition duration-300 h-[52px] max-md:shrink-0 cursor-pointer max-md:gap-x-[81.74px] lg:h-[64px] truncate md:w-full focus-visible:outline-hidden px-5 lg:px-[25px] flex items-center justify-between text-[15px] lg:text-lg rounded-lg font-medium text-white leading-none border border-primary-500/25 shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] data-[state=active]:border-primary-500 bg-white/4"
                 >
                   Network & Services{" "}
-                  <ArrowRight className="max-md:rotate-90 shrink-0 size-[18px] lg:size-6 opacity-0 group-hover:opacity-100 md:group-hover:translate-x-1.5 group-data-[state=active]:opacity-100 text-primary-500 transition duration-300" />
+                  <ArrowRight className="max-md:rotate-90 shrink-0 size-[18px] lg:size-6 opacity-0 group-hover:opacity-100 md:group-hover:translate-x-1.5 group-data-[state=active]:opacity-100 text-white/40 group-data-[state=active]:text-primary-500 transition duration-300" />
                 </TabsPrimitive.Trigger>
                 <TabsPrimitive.Trigger
                   value="Apps"
-                  className="group h-[52px] max-md:shrink-0 max-md:gap-x-[81.74px] lg:h-[64px] truncate md:w-full focus-visible:outline-hidden px-5 lg:px-[25px] flex items-center justify-between text-[15px] lg:text-lg rounded-lg font-medium text-white leading-none border border-primary-500/25 shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] data-[state=active]:border-primary-500 bg-white/4"
+                  className="group data-[state=inactive]:hover:bg-white/10 transition duration-300 h-[52px] max-md:shrink-0 cursor-pointer max-md:gap-x-[81.74px] lg:h-[64px] truncate md:w-full focus-visible:outline-hidden px-5 lg:px-[25px] flex items-center justify-between text-[15px] lg:text-lg rounded-lg font-medium text-white leading-none border border-primary-500/25 shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] data-[state=active]:border-primary-500 bg-white/4"
                 >
                   Apps{" "}
-                  <ArrowRight className="max-md:rotate-90 shrink-0 size-[18px] lg:size-6 opacity-0 group-hover:opacity-100 md:group-hover:translate-x-1.5 group-data-[state=active]:opacity-100 text-primary-500 transition duration-300" />
+                  <ArrowRight className="max-md:rotate-90 shrink-0 size-[18px] lg:size-6 opacity-0 group-hover:opacity-100 md:group-hover:translate-x-1.5 group-data-[state=active]:opacity-100 text-white/40 group-data-[state=active]:text-primary-500 transition duration-300" />
                 </TabsPrimitive.Trigger>
               </TabsPrimitive.TabsList>
 
@@ -2585,7 +2763,7 @@ export default function Landing() {
                   </div>
 
                   <Button
-                    className="rounded-full border-2 max-lg:h-9 max-lg:px-4 max-lg:text-[13px] max-lg:leading-[19.62px] hover:bg-primary-500 shadow-[0px_1px_4px_0px_rgba(0,0,0,.03)] hover:border-primary-500 border-white text-white"
+                    className="rounded-full cursor-pointer border-2 max-lg:h-9 max-lg:px-4 max-lg:text-[13px] max-lg:leading-[19.62px] hover:bg-primary-500 shadow-[0px_1px_4px_0px_rgba(0,0,0,.03)] hover:border-primary-500 border-white text-white"
                     visual="gray"
                     size="xl"
                     variant="outlined"
@@ -2684,7 +2862,7 @@ export default function Landing() {
                 </p>
 
                 <Button
-                  className="bg-white mt-[30px] max-lg:h-9 max-lg:pl-4 max-lg:pr-[17.16px] lg:mt-[50px] max-lg:text-[13.08px] max-lg:leading-[19.62px] max-lg:gap-x-[6px] text-black hover:bg-primary-500 hover:text-white rounded-full"
+                  className="bg-white cursor-pointer mt-[30px] max-lg:h-9 max-lg:pl-4 max-lg:pr-[17.16px] lg:mt-[50px] max-lg:text-[13.08px] max-lg:leading-[19.62px] max-lg:gap-x-[6px] text-black hover:bg-primary-500 hover:text-white rounded-full"
                   size="xl"
                 >
                   <MessageSquare01 className="size-[12.26px] lg:size-[15px]" />{" "}
@@ -2715,9 +2893,11 @@ export default function Landing() {
                     UX/UI Processes & Tools
                   </span>
 
-                  <h1 className="mt-[5px] lg:mt-1.5 text-sm lg:text-[22px] leading-none font-medium text-white">
-                    Content-Heavy Websites
-                  </h1>
+                  <Link href="#" className="focus-visible:outline-none">
+                    <h1 className="mt-[5px] hover:underline transition duration-300 lg:mt-1.5 text-sm lg:text-[22px] leading-none font-medium text-white">
+                      Content-Heavy Websites
+                    </h1>
+                  </Link>
 
                   <div className="mt-3 lg:mt-[15px] flex items-center gap-x-[19px]">
                     <span className="text-[10px] lg:text-xs text-white leading-none font-medium inline-block">
@@ -2738,7 +2918,7 @@ export default function Landing() {
                       sentences about the content of the article. A few
                       sentences about the content of the article.
                     </p>
-                    <button className="size-[28px] lg:size-[35px] focus-visible:outline-hidden inline-flex items-center justify-center shrink-0 text-white/40 hover:text-white">
+                    <button className="cursor-pointer size-[28px] lg:size-[35px] focus-visible:outline-hidden inline-flex items-center justify-center shrink-0 text-white/40 hover:text-white">
                       <ArrowUpRight className="size-[28px] lg:size-[35px]" />
                     </button>
                   </div>
@@ -2760,9 +2940,11 @@ export default function Landing() {
                       Development And UX design
                     </span>
 
-                    <h1 className="mt-[5px] lg:mt-1.5 leading-none text-sm lg:text-base font-medium text-white">
-                      Bitex. UX Design for Stock Analysis App.
-                    </h1>
+                    <Link href="#" className="focus-visible:outline-none">
+                      <h1 className="mt-[5px] hover:underline transition duration-300 lg:mt-1.5 leading-none text-sm lg:text-base font-medium text-white">
+                        Bitex. UX Design for Stock Analysis App.
+                      </h1>
+                    </Link>
 
                     <div className="mt-3 lg:mt-[15px] flex items-center gap-x-2 lg:gap-x-2.5">
                       <span className="inline-block leading-none text-[10px] lg:text-xs font-medium text-white">
@@ -2784,7 +2966,7 @@ export default function Landing() {
                         sentences about the content of the article.
                       </span>
 
-                      <button className="focus-visible:outline-hidden text-white/40 hover:text-white shrink-0">
+                      <button className="cursor-pointer focus-visible:outline-hidden text-white/40 hover:text-white shrink-0">
                         <ArrowUpRight className="size-[28px] lg:size-[35px]" />
                       </button>
                     </div>
@@ -2804,9 +2986,11 @@ export default function Landing() {
                       Development And UX design
                     </span>
 
-                    <h1 className="mt-[5px] lg:mt-1.5 leading-none text-sm lg:text-base font-medium text-white">
-                      Bitex. UX Design for Stock Analysis App.
-                    </h1>
+                    <Link href="#" className="focus-visible:outline-none">
+                      <h1 className="mt-[5px] hover:underline transition duration-300 lg:mt-1.5 leading-none text-sm lg:text-base font-medium text-white">
+                        Bitex. UX Design for Stock Analysis App.
+                      </h1>
+                    </Link>
 
                     <div className="mt-3 lg:mt-[15px] flex items-center gap-x-2 lg:gap-x-2.5">
                       <span className="inline-block leading-none text-[10px] lg:text-xs font-medium text-white">
@@ -2828,7 +3012,7 @@ export default function Landing() {
                         sentences about the content of the article.
                       </span>
 
-                      <button className="focus-visible:outline-hidden text-white/40 hover:text-white shrink-0">
+                      <button className="cursor-pointer focus-visible:outline-hidden text-white/40 hover:text-white shrink-0">
                         <ArrowUpRight className="size-[28px] lg:size-[35px]" />
                       </button>
                     </div>
@@ -2848,9 +3032,11 @@ export default function Landing() {
                       Development And UX design
                     </span>
 
-                    <h1 className="mt-[5px] lg:mt-1.5 leading-none text-sm lg:text-base font-medium text-white">
-                      Bitex. UX Design for Stock Analysis App.
-                    </h1>
+                    <Link href="#" className="focus-visible:outline-none">
+                      <h1 className="mt-[5px] hover:underline transition duration-300 lg:mt-1.5 leading-none text-sm lg:text-base font-medium text-white">
+                        Bitex. UX Design for Stock Analysis App.
+                      </h1>
+                    </Link>
 
                     <div className="mt-3 lg:mt-[15px] flex items-center gap-x-2 lg:gap-x-2.5">
                       <span className="inline-block leading-none text-[10px] lg:text-xs font-medium text-white">
@@ -2872,7 +3058,7 @@ export default function Landing() {
                         sentences about the content of the article.
                       </span>
 
-                      <button className="focus-visible:outline-hidden text-white/40 hover:text-white shrink-0">
+                      <button className="cursor-pointer focus-visible:outline-hidden text-white/40 hover:text-white shrink-0">
                         <ArrowUpRight className="size-[28px] lg:size-[35px]" />
                       </button>
                     </div>
@@ -2884,11 +3070,21 @@ export default function Landing() {
 
           <div className="max-w-[1420px] relative mx-auto py-10 px-3.5 md:p-10 lg:px-5 lg:pt-[50px] lg:pb-[100px] lg:border-x border-b border-primary-500/[.07]">
             <div className="relative">
-              <div className="absolute inset-x-0 bottom-0 h-[348px] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(5,11,25,.5)_50%,rgba(5,11,25,1)_100%)]" />
+              {areCategoriesNotVisible && (
+                <div className="absolute inset-x-0 bottom-0 h-[348px] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(5,11,25,.5)_50%,rgba(5,11,25,1)_100%)]" />
+              )}
               <h1 className="text-[24px] lg:text-[38px] leading-none font-medium text-white text-center">
                 Browse Categories
               </h1>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-3 lg:gap-x-[100px] mt-[30px] lg:mt-[100px] h-[400px] lg:h-[488px] overflow-hidden">
+              <div
+                className={cn(
+                  "grid grid-cols-2 md:grid-cols-4 gap-x-3 lg:gap-x-[100px] mt-[30px] lg:mt-[100px]",
+                  {
+                    "h-[400px] lg:h-[488px] overflow-hidden":
+                      areCategoriesNotVisible,
+                  }
+                )}
+              >
                 <div className="space-y-[9.81px] lg:space-y-3">
                   <h1 className="text-[13px] lg:text-base leading-none text-white font-bold">
                     Software Development
@@ -2928,7 +3124,7 @@ export default function Landing() {
                     ].map((role, index) => (
                       <Link
                         key={index}
-                        className="text-[11px] lg:text-[13px] leading-6 font-medium hover:underline text-white/40"
+                        className="text-[11px] lg:text-[13px] leading-6 transition duration-300 font-medium hover:text-white text-white/40"
                         href="#"
                       >
                         {role}
@@ -2975,7 +3171,7 @@ export default function Landing() {
                     ].map((role, index) => (
                       <Link
                         key={index}
-                        className="text-[11px] leading-[19.62px] lg:text-[13px] lg:leading-6 font-medium hover:underline text-white/40"
+                        className="text-[11px] leading-[19.62px] lg:text-[13px] lg:leading-6 transition duration-300 font-medium hover:text-white text-white/40"
                         href="#"
                       >
                         {role}
@@ -3022,7 +3218,7 @@ export default function Landing() {
                     ].map((role, index) => (
                       <Link
                         key={index}
-                        className="text-[11px] leading-[19.62px] lg:text-[13px] lg:leading-6 font-medium hover:underline text-white/40"
+                        className="text-[11px] leading-[19.62px] lg:text-[13px] lg:leading-6 transition duration-300 font-medium hover:text-white text-white/40"
                         href="#"
                       >
                         {role}
@@ -3069,7 +3265,7 @@ export default function Landing() {
                     ].map((role, index) => (
                       <Link
                         key={index}
-                        className="text-[11px] leading-[19.62px] lg:text-[13px] leading-6 font-medium hover:underline text-white/40"
+                        className="text-[11px] leading-[19.62px] lg:text-[13px] lg:leading-6 transition duration-300 font-medium hover:text-white text-white/40"
                         href="#"
                       >
                         {role}
@@ -3080,32 +3276,38 @@ export default function Landing() {
               </div>
             </div>
 
-            <div className="flex items-center justify-center mt-5 lg:mt-9">
-              <Button
-                className="rounded-full border-2 max-lg:h-9 max-lg:px-4 max-lg:text-[13px] max-lg:leading-[19.62px] hover:bg-primary-500 shadow-[0px_1px_4px_0px_rgba(0,0,0,.03)] hover:border-primary-500 border-white text-white"
-                visual="gray"
-                size="xl"
-                variant="outlined"
-              >
-                View more
-              </Button>
-            </div>
+            {areCategoriesNotVisible && (
+              <div className="flex items-center justify-center mt-5 lg:mt-9">
+                <Button
+                  className="rounded-full cursor-pointer border-2 max-lg:h-9 max-lg:px-4 max-lg:text-[13px] max-lg:leading-[19.62px] hover:bg-primary-500 shadow-[0px_1px_4px_0px_rgba(0,0,0,.03)] hover:border-primary-500 border-white text-white"
+                  visual="gray"
+                  size="xl"
+                  variant="outlined"
+                  onClick={() => setAreCategoriesNotVisible(false)}
+                >
+                  View more
+                </Button>
+              </div>
+            )}
           </div>
         </div>
 
         <footer>
           <div className="border-y lg:px-[50px] 3xl:px-[100px] 4xl:px-[150px] 5xl:px-[250px] border-primary-500/[.07] bg-white/4 shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)]">
             <div className="max-w-[1420px] mx-auto border-x h-[44px] lg:h-[72px] border-primary-500/[.07] items-center flex justify-center">
-              <button className="focus-visible:outline-hidden inline-flex items-center gap-x-2 text-[11px] lg:text-[13px] leading-[19.62px] lg:leading-[24px] font-medium text-white">
+              <Link
+                className="focus-visible:outline-hidden inline-flex items-center gap-x-2 text-[11px] lg:text-[13px] leading-[19.62px] lg:leading-[24px] font-medium text-white"
+                href="#header"
+              >
                 <ArrowUp className="size-[12.26px] lg:size-[15px]" /> Back to
                 Top
-              </button>
+              </Link>
             </div>
           </div>
 
           <div className="relative border-b border-primary-500/[.07] px-3.5 md:px-10 lg:px-[50px] 3xl:px-[100px] 4xl:px-[150px] 5xl:px-[250px] bg-[linear-gradient(180deg,rgba(255,255,255,.04)_0%,rgba(255,255,255,0)_100%)]">
             <div className="max-w-[1420px] mx-auto py-5 md:pt-10 md:pb-5 lg:px-5 lg:py-6 lg:border-x border-primary-500/[.07]">
-              <div className="p-5 md:p-10 lg:p-[50px] relative rounded-[6px] lg:rounded-lg border flex flex-col max-md:gap-y-[26.16px] md:flex-row md:gap-x-5 lg:flex-col border-primary-500/70 bg-white/2 shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)]">
+              <div className="p-5 md:p-10 lg:p-[50px] relative rounded-[6px] lg:rounded-lg border flex flex-col max-md:gap-y-[26.16px] md:flex-row md:gap-x-5 lg:flex-col border-white/[.25] bg-white/2 shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)]">
                 <CroppedMarketeqLogo className="absolute right-0 max-lg:hidden inset-y-0" />
 
                 <h1 className="text-[18px] md:text-[26px] lg:text-[24px] leading-tight font-medium text-white">
@@ -3114,14 +3316,14 @@ export default function Landing() {
                 <div className="lg:contents">
                   <div className="lg:mt-8 flex items-center gap-x-[19.62px] lg:gap-x-6">
                     <Button
-                      className="bg-white max-lg:h-9 max-lg:px-3 max-lg:text-[13px] max-lg:leading-[19.62px] max-lg:gap-x-1 text-black hover:bg-primary-500 hover:text-white rounded-full"
+                      className="bg-white cursor-pointer max-lg:h-9 max-lg:px-3 max-lg:text-[13px] max-lg:leading-[19.62px] max-lg:gap-x-1 text-black hover:bg-primary-500 hover:text-white rounded-full"
                       size="xl"
                     >
                       Sign up{" "}
                       <ArrowRight className="size-[14.71px] lg:size-[15px]" />
                     </Button>
                     <Button
-                      className="rounded-full max-lg:h-9 max-lg:px-3 max-lg:text-[13px] max-lg:leading-[19.62px] max-lg:gap-x-1 border-2 hover:bg-primary-500 shadow-[0px_1px_4px_0px_rgba(0,0,0,.03)] hover:border-primary-500 border-white text-white"
+                      className="rounded-full cursor-pointer max-lg:h-9 max-lg:px-3 max-lg:text-[13px] max-lg:leading-[19.62px] max-lg:gap-x-1 border-2 hover:bg-primary-500 shadow-[0px_1px_4px_0px_rgba(0,0,0,.03)] hover:border-primary-500 border-white text-white"
                       visual="gray"
                       size="xl"
                       variant="outlined"
@@ -3146,7 +3348,9 @@ export default function Landing() {
 
               <div className="mt-10 lg:mt-[100px] flex max-lg:gap-y-10 lg:flex-row flex-col lg:items-start lg:justify-between">
                 <div className="flex items-center gap-x-[16.35px] lg:gap-x-5">
-                  <Logo className="w-[98.08px] h-[14.4px] lg:w-[120px] lg:h-[17.63px] shrink-0" />
+                  <Link className="focus-visible:outline-none" href="/">
+                    <Logo className="w-[98.08px] h-[14.4px] lg:w-[120px] lg:h-[17.63px] shrink-0" />
+                  </Link>
                   <span className="text-xs lg:text-sm leading-none text-white">
                     Tech Projects on Demand
                   </span>
@@ -3154,26 +3358,45 @@ export default function Landing() {
 
                 <div className="flex items-center justify-between lg:gap-x-[43px]">
                   <div className="flex items-center gap-x-[13.56px] lg:gap-x-[16.6px]">
-                    <button className="focus-visible:outline-hidden size-[30px] flex items-center justify-center shrink-0 bg-white/2 border border-white/25 rounded-full">
-                      <Facebook className="size-4 text-white" />
-                    </button>
-                    <button className="focus-visible:outline-hidden size-[30px] flex items-center justify-center shrink-0 bg-white/2 border border-white/25 rounded-full">
-                      <TwitterSolid className="size-4 text-white" />
-                    </button>
-                    <button className="focus-visible:outline-hidden size-[30px] flex items-center justify-center shrink-0 bg-white/2 border border-white/25 rounded-full">
-                      <Instagram className="size-4 text-white" />
-                    </button>
-                    <button className="focus-visible:outline-hidden size-[30px] flex items-center justify-center shrink-0 bg-white/2 border border-white/25 rounded-full">
-                      <LinkedInSolid className="size-4 text-white" />
-                    </button>
+                    <Link
+                      href="#"
+                      className="focus-visible:outline-hidden hover:bg-white hover:bg-white hover:text-dark-blue-400 transition duration-300 text-white size-[30px] flex items-center justify-center shrink-0 bg-white/2 border border-white/25 rounded-full"
+                    >
+                      <Facebook className="size-4" />
+                    </Link>
+                    <Link
+                      href="#"
+                      className="focus-visible:outline-hidden hover:bg-white hover:bg-white hover:text-dark-blue-400 transition duration-300 text-white size-[30px] flex items-center justify-center shrink-0 bg-white/2 border border-white/25 rounded-full"
+                    >
+                      <TwitterSolid className="size-4" />
+                    </Link>
+                    <Link
+                      href="#"
+                      className="focus-visible:outline-hidden hover:bg-white hover:bg-white hover:text-dark-blue-400 transition duration-300 text-white size-[30px] flex items-center justify-center shrink-0 bg-white/2 border border-white/25 rounded-full"
+                    >
+                      <Instagram className="size-4" />
+                    </Link>
+                    <Link
+                      href="#"
+                      className="focus-visible:outline-hidden hover:bg-white hover:bg-white hover:text-dark-blue-400 transition duration-300 text-white size-[30px] flex items-center justify-center shrink-0 bg-white/2 border border-white/25 rounded-full"
+                    >
+                      <LinkedInSolid className="size-4" />
+                    </Link>
                   </div>
 
-                  <button className="h-[31px] pl-2 pr-[11px] inline-flex items-center gap-x-[7px] focus-visible:outline-hidden">
+                  <button
+                    onClick={() => setIsOpen(true)}
+                    className="h-[31px] cursor-pointer pl-2 pr-[11px] inline-flex items-center gap-x-[7px] focus-visible:outline-hidden"
+                  >
                     <Globe className="size-5 text-white" />
                     <span className="text-white text-xs leading-none">
                       English
                     </span>
-                    <ChevronDown className="size-4 text-white" />
+                    {isOpen ? (
+                      <ChevronUp className="size-4 text-white" />
+                    ) : (
+                      <ChevronDown className="size-4 text-white" />
+                    )}
                   </button>
                 </div>
               </div>

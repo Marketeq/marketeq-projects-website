@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn("scroll-smooth", font.variable)}>
-      <body className="overflow-x-hidden">{children}</body>
+      <body className="overflow-x-hidden isolate">{children}</body>
     </html>
   )
 }

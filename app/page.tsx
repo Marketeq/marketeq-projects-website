@@ -225,10 +225,10 @@ export default function Landing() {
 
       <div className="min-h-screen bg-primary-500/10 isolate">
         <div
-          className="lg:px-[50px] bg-black before:content-[''] before:absolute before:inset-0 before:bg-primary-500/10 relative 3xl:px-[100px] sticky z-50 top-0 4xl:px-[150px] 5xl:px-[250px]"
+          className="lg:px-[50px] backdrop-blur-[25px] relative 3xl:px-[100px] sticky z-50 top-0 4xl:px-[150px] 5xl:px-[250px]"
           id="header"
         >
-          <div className="max-w-[1420px] relative border-y relative mx-auto justify-between items-center flex lg:px-5 py-3 pl-4 pr-2.5 md:py-2 md:px-10 lg:py-[15px] lg:border-x border-primary-500/[.07]">
+          <div className="max-w-[1420px] border-y relative mx-auto justify-between items-center flex lg:px-5 py-3 pl-4 pr-2.5 md:py-2 md:px-10 lg:py-[15px] lg:border-x border-primary-500/[.07]">
             <div className="size-[284px] absolute opacity-[.45] top-[-106px] left-[-68px] bg-primary-500/20 blur-3xl" />
             <Logo className="w-[104.62px] lg:w-[128px] h-[15.37px] lg:h-[18.8px]" />
 

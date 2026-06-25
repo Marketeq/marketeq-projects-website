@@ -157,7 +157,7 @@ export default function Landing() {
               placeholder="Search by language or country"
             />
 
-            <div className="h-12 lg:h-[52px] mt-5 rounded-[5px] flex items-center justify-between border-b border-white/20 px-3.5">
+            <div className="h-12 lg:h-[52px] mt-5 flex items-center justify-between border-b border-white/20 px-3.5">
               <div className="flex items-center gap-x-4">
                 <div className="w-[34px] shrink-0 h-[24px] bg-red-500 rounded-[4px]"></div>
                 <h1 className="text-sm lg:text-base font-bold leading-none text-white">
@@ -348,10 +348,13 @@ export default function Landing() {
                 </div>
               </form>
             </div>
-            <div className="max-md:bottom-[-152px] max-md:left-[82px] md:right-[-14px] lg:right-[-44px] max-3xl:scale-[.66] md:top-[-68px] lg:top-[-64px] 3xl:top-[71px] 4xl:top-[41px] 3xl:right-[24.13px] 4xl:right-[34.13px] absolute">
+            <div className="max-md:bottom-[-152px] max-md:left-1/2 max-md:-translate-x-1/2 md:right-[-14px] lg:right-[-44px] max-3xl:scale-[.66] md:top-[-68px] lg:top-[-64px] 3xl:top-[71px] 4xl:top-[41px] 3xl:right-[24.13px] 4xl:right-[34.13px] absolute">
               <div className="relative rounded-[28px] translate-x-[-169px] border border-primary-500/[.14] p-3">
                 <div className="rounded-[20px] flex items-center gap-x-[17.36px] border border-primary-500/25 p-[18.52px] pr-[30.52px]">
-                  <Avatar className="size-[100px] shrink-0" size="2xl">
+                  <Avatar
+                    className="size-[100px] shrink-0 hover:ring-0 active:ring-0"
+                    size="2xl"
+                  >
                     <AvatarImage src="/man.jpg" alt="Man" />
                     <AvatarFallback>M</AvatarFallback>
                   </Avatar>
@@ -402,7 +405,10 @@ export default function Landing() {
               </div>
               <div className="relative z-10 rounded-[28px] translate-x-[-60px] translate-y-[-64px] border border-primary-500/[.14] p-3">
                 <div className="rounded-[20px] bg-[#0D1D42] flex items-center gap-x-[17.36px] border border-primary-500/25 p-[18.52px] pr-[30.52px]">
-                  <Avatar className="size-[100px] shrink-0" size="2xl">
+                  <Avatar
+                    className="size-[100px] shrink-0 hover:ring-0 active:ring-0"
+                    size="2xl"
+                  >
                     <AvatarImage src="/man.jpg" alt="Man" />
                     <AvatarFallback>M</AvatarFallback>
                   </Avatar>
@@ -453,7 +459,10 @@ export default function Landing() {
               </div>
               <div className="relative rounded-[28px] translate-x-[14px] translate-y-[-94px] border border-primary-500/[.14] p-3">
                 <div className="rounded-[20px] flex items-center gap-x-[17.36px] border border-primary-500/25 p-[18.52px] pr-[30.52px]">
-                  <Avatar className="size-[100px] shrink-0" size="2xl">
+                  <Avatar
+                    className="size-[100px] shrink-0 hover:ring-0 active:ring-0"
+                    size="2xl"
+                  >
                     <AvatarImage src="/man.jpg" alt="Man" />
                     <AvatarFallback>M</AvatarFallback>
                   </Avatar>
@@ -820,7 +829,7 @@ export default function Landing() {
                 </span>
 
                 <div className="mt-3 md:mt-6 inline-flex items-center gap-x-[12px]">
-                  <Avatar className="size-[61.30px] md:size-[75px]">
+                  <Avatar className="size-[61.30px] hover:ring-0 active:ring-0 md:size-[75px]">
                     <AvatarImage src="/man.jpg" alt="Man" />
                     <AvatarFallback>M</AvatarFallback>
                   </Avatar>
@@ -886,7 +895,7 @@ export default function Landing() {
                       <div className="size-[399px] absolute opacity-[.45] top-[37.5px] left-[232px] bg-primary-500/20 blur-3xl" />
                       <div className="relative grid md:grid-cols-3 gap-y-10 md:gap-x-[57px] lg:gap-x-[89px] pl-[50px] lg:px-[50px]">
                         <article className="relative">
-                          <div className="absolute text-[100px] lg:text-[120.23px] leading-none text-primary-500/[.07] -bottom-2 md:bottom-[-26px] translate-x-[-80%] font-bold">
+                          <div className="absolute text-[100px] lg:text-[120.23px] leading-none text-primary-500/[.07] bottom-0 translate-x-[-80%] font-bold">
                             1
                           </div>
                           <div className="bg-primary-500/[.07] size-[51.06px] lg:size-[62.47px] rounded-full inline-flex items-center justify-center border border-primary-500/12.5">
@@ -905,7 +914,7 @@ export default function Landing() {
                           </div>
                         </article>
                         <article className="relative">
-                          <div className="absolute text-[100px] lg:text-[120.23px] leading-none text-primary-500/[.07] -bottom-2 md:bottom-[-26px] translate-x-[-80%] font-bold">
+                          <div className="absolute text-[100px] lg:text-[120.23px] leading-none text-primary-500/[.07] bottom-0 translate-x-[-80%] font-bold">
                             2
                           </div>
                           <div className="bg-primary-500/[.07] size-[51.06px] lg:size-[62.47px] rounded-full inline-flex items-center justify-center border border-primary-500/12.5">
@@ -924,7 +933,7 @@ export default function Landing() {
                           </div>
                         </article>
                         <article className="relative">
-                          <div className="absolute text-[100px] lg:text-[120.23px] leading-none text-primary-500/[.07] -bottom-2 md:bottom-[-26px] translate-x-[-80%] font-bold">
+                          <div className="absolute text-[100px] lg:text-[120.23px] leading-none text-primary-500/[.07] bottom-0 translate-x-[-80%] font-bold">
                             3
                           </div>
                           <div className="bg-primary-500/[.07] size-[51.06px] lg:size-[62.47px] rounded-full inline-flex items-center justify-center border border-primary-500/12.5">
@@ -954,11 +963,11 @@ export default function Landing() {
                           Start a Project
                         </Button>
                         <Button
-                          className="rounded-full cursor-pointer max-lg:h-9 max-lg:px-4 max-lg:text-[13px] max-lg:gap-x-1.5 max-lg:leading-[19.62px] bg-white text-dark-blue-400 hover:bg-primary-500 hover:text-white"
+                          className="rounded-full group cursor-pointer max-lg:h-9 max-lg:px-4 max-lg:text-[13px] max-lg:gap-x-1.5 max-lg:leading-[19.62px] bg-white text-dark-blue-400 hover:bg-primary-500 hover:text-white"
                           size="xl"
                         >
                           Browse Projects{" "}
-                          <ArrowRight className="size-[14.71px] lg:size-[18px]" />{" "}
+                          <ArrowRight className="size-[14.71px] lg:size-[18px] group-hover:translate-x-1 transition duration-300" />{" "}
                         </Button>
                       </div>
                     </div>
@@ -1067,160 +1076,22 @@ export default function Landing() {
                               </div>
 
                               <div className="flex mt-[16.35px] lg:mt-5 items-center justify-between">
-                                <TooltipProvider>
-                                  <Tooltip>
-                                    <TooltipTrigger asChild>
-                                      <AvatarGroup max={2} size="sm">
-                                        <Avatar
-                                          size="sm"
-                                          className="border-[3px] border-black hover:ring-0 active:ring-0"
-                                        >
-                                          <AvatarImage
-                                            src="/woman.jpg"
-                                            alt="Woman"
-                                          />
-                                          <AvatarFallback>W</AvatarFallback>
-                                        </Avatar>
-                                        <Avatar
-                                          size="sm"
-                                          className="border-[3px] border-black hover:ring-0 active:ring-0"
-                                        >
-                                          <AvatarImage
-                                            src="/woman.jpg"
-                                            alt="Woman"
-                                          />
-                                          <AvatarFallback>W</AvatarFallback>
-                                        </Avatar>
-                                        <Avatar
-                                          size="sm"
-                                          className="border-[3px] border-black hover:ring-0 active:ring-0"
-                                        >
-                                          <AvatarImage
-                                            src="/woman.jpg"
-                                            alt="Woman"
-                                          />
-                                          <AvatarFallback>W</AvatarFallback>
-                                        </Avatar>
-                                        <Avatar
-                                          size="sm"
-                                          className="border-[3px] border-black hover:ring-0 active:ring-0"
-                                        >
-                                          <AvatarImage
-                                            src="/woman.jpg"
-                                            alt="Woman"
-                                          />
-                                          <AvatarFallback>W</AvatarFallback>
-                                        </Avatar>
-                                        <Avatar
-                                          size="sm"
-                                          className="border-[3px] border-black hover:ring-0 active:ring-0"
-                                        >
-                                          <AvatarImage
-                                            src="/woman.jpg"
-                                            alt="Woman"
-                                          />
-                                          <AvatarFallback>W</AvatarFallback>
-                                        </Avatar>
-                                        <Avatar
-                                          size="sm"
-                                          className="border-[3px] border-black hover:ring-0 active:ring-0"
-                                        >
-                                          <AvatarImage
-                                            src="/woman.jpg"
-                                            alt="Woman"
-                                          />
-                                          <AvatarFallback>W</AvatarFallback>
-                                        </Avatar>
-                                      </AvatarGroup>
-                                    </TooltipTrigger>
-                                    <TooltipContent className="p-0" size="md">
-                                      <ScrollArea
-                                        className="h-[192px] p-3 pr-4"
-                                        scrollBar={
-                                          <ScrollBar
-                                            className="w-4 p-1"
-                                            thumbClassName="bg-white/20"
-                                          />
-                                        }
-                                      >
-                                        <div className="space-y-3 pr-5">
-                                          <div className="flex items-center gap-x-2">
-                                            <Avatar className="hover:ring-0 active:ring-0">
-                                              <AvatarImage
-                                                src="/woman.jpg"
-                                                alt="Woman"
-                                              />
-                                              <AvatarFallback>W</AvatarFallback>
-                                            </Avatar>
-                                            <span className="text-xs font-medium leading-5">
-                                              Woman
-                                            </span>
-                                          </div>
-                                          <div className="flex items-center gap-x-2">
-                                            <Avatar className="hover:ring-0 active:ring-0">
-                                              <AvatarImage
-                                                src="/woman.jpg"
-                                                alt="Woman"
-                                              />
-                                              <AvatarFallback>W</AvatarFallback>
-                                            </Avatar>
-                                            <span className="text-xs font-medium leading-5">
-                                              Woman
-                                            </span>
-                                          </div>
-                                          <div className="flex items-center gap-x-2">
-                                            <Avatar className="hover:ring-0 active:ring-0">
-                                              <AvatarImage
-                                                src="/woman.jpg"
-                                                alt="Woman"
-                                              />
-                                              <AvatarFallback>W</AvatarFallback>
-                                            </Avatar>
-                                            <span className="text-xs font-medium leading-5">
-                                              Woman
-                                            </span>
-                                          </div>
-                                          <div className="flex items-center gap-x-2">
-                                            <Avatar className="hover:ring-0 active:ring-0">
-                                              <AvatarImage
-                                                src="/woman.jpg"
-                                                alt="Woman"
-                                              />
-                                              <AvatarFallback>W</AvatarFallback>
-                                            </Avatar>
-                                            <span className="text-xs font-medium leading-5">
-                                              Woman
-                                            </span>
-                                          </div>
-                                          <div className="flex items-center gap-x-2">
-                                            <Avatar className="hover:ring-0 active:ring-0">
-                                              <AvatarImage
-                                                src="/woman.jpg"
-                                                alt="Woman"
-                                              />
-                                              <AvatarFallback>W</AvatarFallback>
-                                            </Avatar>
-                                            <span className="text-xs font-medium leading-5">
-                                              Woman
-                                            </span>
-                                          </div>
-                                          <div className="flex items-center gap-x-2">
-                                            <Avatar className="hover:ring-0 active:ring-0">
-                                              <AvatarImage
-                                                src="/woman.jpg"
-                                                alt="Woman"
-                                              />
-                                              <AvatarFallback>W</AvatarFallback>
-                                            </Avatar>
-                                            <span className="text-xs font-medium leading-5">
-                                              Woman
-                                            </span>
-                                          </div>
-                                        </div>
-                                      </ScrollArea>
-                                    </TooltipContent>
-                                  </Tooltip>
-                                </TooltipProvider>
+                                <AvatarGroup size="sm">
+                                  <Avatar
+                                    size="sm"
+                                    className="hover:ring-0 active:ring-0"
+                                  >
+                                    <AvatarImage src="/woman.jpg" alt="Woman" />
+                                    <AvatarFallback>W</AvatarFallback>
+                                  </Avatar>
+                                  <Avatar
+                                    size="sm"
+                                    className="hover:ring-0 active:ring-0"
+                                  >
+                                    <AvatarImage src="/woman.jpg" alt="Woman" />
+                                    <AvatarFallback>W</AvatarFallback>
+                                  </Avatar>
+                                </AvatarGroup>
 
                                 <Favorite className="fill-transparent cursor-pointer text-gray-500" />
                               </div>
@@ -1258,15 +1129,17 @@ export default function Landing() {
                       Get Started with Projects on Demand
                     </h1>
 
-                    <p className="mt-2 text-lg lg:mt-3 lg:text-[30px] leading-none text-white/70">
-                      Launch ready-to-go projects with built-in teams or
-                      customize your own from a global network of premium
-                      talent.
-                    </p>
+                    <div className="lg:max-w-[880px] mt-2">
+                      <p className="text-lg lg:mt-3 lg:text-[30px] leading-none text-white/70">
+                        Launch ready-to-go projects with built-in teams or
+                        customize your own from a global network of premium
+                        talent.
+                      </p>
+                    </div>
                   </div>
 
                   <div className="mt-[30px] lg:mt-[50px] max-w-[865px] grid grid-cols-2 md:grid-cols-4 gap-3.5 lg:gap-x-5">
-                    <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
+                    <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col backdrop-blur-[13.98px] items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
                       <div className="p-[11.44px] lg:p-3.5 inline-flex items-center bg-white/5 rounded-full">
                         <File02 className="size-[27.79px] lg:size-[34px] text-white" />
                       </div>
@@ -1274,13 +1147,13 @@ export default function Landing() {
                         href="#"
                         className="flex items-center gap-x-[3.27px] lg:gap-x-1 group focus-visible:outline-none"
                       >
-                        <span className="text-xs lg:text-sm font-bold leading-none text-white group-hover:underline transition duration-300">
+                        <span className="text-xs lg:text-sm block whitespace-nowrap font-bold leading-none text-white group-hover:underline transition duration-300">
                           Find A Project
                         </span>
                         <ArrowRight className="size-[13.8px] lg:size-[17px] text-white group-hover:translate-x-1 transition duration-300" />
                       </Link>
                     </div>
-                    <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
+                    <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col backdrop-blur-[13.98px] items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
                       <div className="p-[11.44px] lg:p-3.5 inline-flex items-center bg-white/5 rounded-full">
                         <Users03 className="size-[27.79px] lg:size-[34px] text-white" />
                       </div>
@@ -1288,13 +1161,13 @@ export default function Landing() {
                         href="#"
                         className="flex items-center gap-x-[3.27px] lg:gap-x-1 group focus-visible:outline-none"
                       >
-                        <span className="text-xs lg:text-sm font-bold leading-none text-white group-hover:underline transition duration-300">
+                        <span className="text-xs lg:text-sm block whitespace-nowrap font-bold leading-none text-white group-hover:underline transition duration-300">
                           Hire a Team
                         </span>
                         <ArrowRight className="size-[13.8px] lg:size-[17px] text-white group-hover:translate-x-1 transition duration-300" />
                       </Link>
                     </div>
-                    <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
+                    <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col backdrop-blur-[13.98px] items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
                       <div className="p-[11.44px] lg:p-3.5 inline-flex items-center bg-white/5 rounded-full">
                         <SearchRefraction className="size-[27.79px] lg:size-[34px] text-white" />
                       </div>
@@ -1302,13 +1175,13 @@ export default function Landing() {
                         href="#"
                         className="flex items-center gap-x-[3.27px] lg:gap-x-1 group focus-visible:outline-none"
                       >
-                        <span className="text-xs lg:text-sm font-bold leading-none text-white group-hover:underline transition duration-300">
+                        <span className="text-xs lg:text-sm block whitespace-nowrap font-bold leading-none text-white group-hover:underline transition duration-300">
                           Find Talent
                         </span>
                         <ArrowRight className="size-[13.8px] lg:size-[17px] text-white group-hover:translate-x-1 transition duration-300" />
                       </Link>
                     </div>
-                    <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
+                    <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col backdrop-blur-[13.98px] items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
                       <div className="p-[11.44px] lg:p-3.5 inline-flex items-center bg-white/5 rounded-full">
                         <CubeOutline className="size-[27.79px] lg:size-[34px] text-white" />
                       </div>
@@ -1316,7 +1189,7 @@ export default function Landing() {
                         href="#"
                         className="flex items-center gap-x-[3.27px] lg:gap-x-1 group focus-visible:outline-none"
                       >
-                        <span className="text-xs lg:text-sm font-bold leading-none text-white group-hover:underline transition duration-300">
+                        <span className="text-xs lg:text-sm block whitespace-nowrap font-bold leading-none text-white group-hover:underline transition duration-300">
                           Build A Project
                         </span>
                         <ArrowRight className="size-[13.8px] lg:size-[17px] text-white group-hover:translate-x-1 transition duration-300" />
@@ -1344,7 +1217,7 @@ export default function Landing() {
 
                   <div className="mt-7 lg:mt-[34px] inline-flex items-center gap-x-[19.62px] lg:gap-x-6">
                     <Avatar
-                      className="size-[81.74px] lg:size-[100px] border border-white"
+                      className="size-[81.74px] hover:ring-0 active:ring-0 lg:size-[100px] border border-white"
                       size="2xl"
                     >
                       <AvatarImage src="/man.jpg" alt="Man" />
@@ -1438,7 +1311,9 @@ export default function Landing() {
                   alt="Guy working"
                   fill
                 />
-                <div className="bg-[linear-gradient(180deg,rgba(0,0,0,0)_26.73%,rgba(0,0,0,.51)_49.94%,rgba(0,0,0,0)_59.28%,rgba(0,0,0,0)_100%)] absolute inset-0 bg-gray-900/5 blur-[3.4px]" />
+
+                <div className="bg-[linear-gradient(180deg,rgba(0,0,0,0)_27.81%,rgba(0,0,0,.75)_63.9%,rgba(0,0,0,.38)_100%)] absolute inset-0 bg-gray-900/5 blur-[3.4px]" />
+
                 <div className="relative">
                   <button className="py-1.5 px-2 lg:py-2 lg:px-3 bg-primary-500 rounded-[4px] lg:rounded-[5px] focus-visible:outline-hidden flex items-center gap-x-2.5 text-xs lg:text-lg leading-none font-medium text-white">
                     <Briefcase className="size-4 lg:size-[21px]" /> For Clients
@@ -1457,49 +1332,61 @@ export default function Landing() {
                   </div>
 
                   <div className="mt-[30px] lg:mt-[50px] max-w-[865px] grid grid-cols-2 md:grid-cols-4 gap-3.5 lg:gap-x-5">
-                    <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
-                      <div className="size-[59.66px] lg:p-3.5 inline-flex items-center bg-white/5 rounded-full">
+                    <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col backdrop-blur-[13.98px] items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
+                      <div className="size-[59.66px] lg:p-3.5 inline-flex items-center bg-white/5 rounded-full justify-center">
                         <ChartBreakoutCircle className="size-[27.79px] lg:size-[34px] text-white" />
                       </div>
-                      <div className="flex items-center gap-x-[3.27px] lg:gap-x-1">
-                        <span className="text-xs lg:text-sm font-bold leading-none text-white">
+                      <Link
+                        href="#"
+                        className="flex items-center gap-x-[3.27px] lg:gap-x-1 group"
+                      >
+                        <span className="text-xs block lg:text-sm font-bold whitespace-nowrap leading-none text-white hover:underline transition duration-300">
                           Find Opportunities
                         </span>
-                        <ArrowRight className="size-[13.8px] lg:size-[17px] text-white" />
-                      </div>
+                        <ArrowRight className="size-[13.8px] lg:size-[17px] text-white group-hover:translate-x-1 transition duration-300" />
+                      </Link>
                     </div>
-                    <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
-                      <div className="size-[59.66px] lg:p-3.5 inline-flex items-center bg-white/5 rounded-full">
+                    <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col backdrop-blur-[13.98px] items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
+                      <div className="size-[59.66px] lg:p-3.5 inline-flex items-center bg-white/5 rounded-full justify-center">
                         <Certificate01 className="size-[27.79px] lg:size-[34px] text-white" />
                       </div>
-                      <div className="flex items-center gap-x-[3.27px] lg:gap-x-1">
-                        <span className="text-xs lg:text-sm font-bold leading-none text-white">
+                      <Link
+                        href="#"
+                        className="flex items-center gap-x-[3.27px] lg:gap-x-1 group"
+                      >
+                        <span className="text-xs block lg:text-sm font-bold whitespace-nowrap leading-none text-white hover:underline transition duration-300">
                           Marketeq University
                         </span>
-                        <ArrowRight className="size-[13.8px] lg:size-[17px] text-white" />
-                      </div>
+                        <ArrowRight className="size-[13.8px] lg:size-[17px] text-white group-hover:translate-x-1 transition duration-300" />
+                      </Link>
                     </div>
-                    <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
-                      <div className="size-[59.66px] lg:p-3.5 inline-flex items-center bg-white/5 rounded-full">
+                    <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col backdrop-blur-[13.98px] items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
+                      <div className="size-[59.66px] lg:p-3.5 inline-flex items-center bg-white/5 rounded-full justify-center">
                         <Laptop01 className="size-[27.79px] lg:size-[34px] text-white" />
                       </div>
-                      <div className="flex items-center gap-x-[3.27px] lg:gap-x-1">
-                        <span className="text-xs lg:text-sm font-bold leading-none text-white">
+                      <Link
+                        href="#"
+                        className="flex items-center gap-x-[3.27px] lg:gap-x-1 group"
+                      >
+                        <span className="text-xs block lg:text-sm font-bold whitespace-nowrap leading-none text-white hover:underline transition duration-300">
                           Work Your Way
                         </span>
-                        <ArrowRight className="size-[13.8px] lg:size-[17px] text-white" />
-                      </div>
+                        <ArrowRight className="size-[13.8px] lg:size-[17px] text-white group-hover:translate-x-1 transition duration-300" />
+                      </Link>
                     </div>
-                    <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
-                      <div className="size-[59.66px] lg:p-3.5 inline-flex items-center bg-white/5 rounded-full">
+                    <div className="lg:pt-[28px] lg:pb-[20px] flex flex-col backdrop-blur-[13.98px] items-center p-5 lg:px-8 gap-y-4 lg:gap-y-5 rounded-lg bg-gray-900/26 blur-[13.98]">
+                      <div className="size-[59.66px] lg:p-3.5 inline-flex items-center bg-white/5 rounded-full justify-center">
                         <CoinStack className="size-[27.79px] lg:size-[34px] text-white" />
                       </div>
-                      <div className="flex items-center gap-x-[3.27px] lg:gap-x-1">
-                        <span className="text-xs lg:text-sm font-bold leading-none text-white">
+                      <Link
+                        href="#"
+                        className="flex items-center gap-x-[3.27px] lg:gap-x-1 group"
+                      >
+                        <span className="text-xs block lg:text-sm font-bold whitespace-nowrap leading-none text-white hover:underline transition duration-300">
                           Flexible Payments
                         </span>
-                        <ArrowRight className="size-[13.8px] lg:size-[17px] text-white" />
-                      </div>
+                        <ArrowRight className="size-[13.8px] lg:size-[17px] text-white group-hover:translate-x-1 transition duration-300" />
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -1513,7 +1400,7 @@ export default function Landing() {
 
                 <div className="lg:max-w-[750.8px] flex md:flex-row flex-col items-center gap-5 lg:gap-x-[45px]">
                   <Avatar
-                    className="size-[105px] lg:size-[132.12px] 3xl:size-[135.12px] border border-white"
+                    className="size-[105px] hover:ring-0 active:ring-0 lg:size-[132.12px] 3xl:size-[135.12px] border border-white"
                     size="2xl"
                   >
                     <AvatarImage src="/man.jpg" alt="Man" />
@@ -1806,7 +1693,7 @@ export default function Landing() {
                   {fromLength(4).map((item) => (
                     <SwiperSlide key={item}>
                       <article className="bg-[#091229] flex drop-shadow-[0px_2px_5px_0px_rgba(0,0,0,.04)] border border-white/5 rounded-lg overflow-hidden">
-                        <div className="p-4 lg:p-5 shrink-0 w-[299px]">
+                        <div className="p-4 lg:p-5 shrink-0 w-[299px] flex flex-col">
                           <h1 className="text-xs lg:text-sm font-bold text-white leading-none">
                             85 - $120{" "}
                             <span className="text-[9px] lg:text-[10px] leading-none font-light">
@@ -1899,7 +1786,7 @@ export default function Landing() {
                             </button>
                           </div>
 
-                          <div className="mt-[34.81px] lg:mt-[47.97px]">
+                          <div className="pt-[34.81px] lg:pt-[47.97px] mt-auto">
                             <h3 className="text-[9px] lg:text-[10px] text-white font-light leading-none">
                               Previous clients
                             </h3>
@@ -1920,7 +1807,7 @@ export default function Landing() {
                             <div className="absolute top-0 left-0">
                               <Avatar
                                 size="2xl"
-                                className="size-[143.04px] hover:ring-0 lg:size-[175px]"
+                                className="size-[143.04px] hover:ring-0 active:ring-0 lg:size-[175px]"
                               >
                                 <AvatarImage src="/man.jpg" alt="Man" />
                                 <AvatarFallback>M</AvatarFallback>
@@ -1947,7 +1834,7 @@ export default function Landing() {
                             <div className="absolute bottom-0 left-[30.49px] lg:left-[34.88px]">
                               <Avatar
                                 size="2xl"
-                                className="size-[85.82px] hover:ring-0 lg:size-[105px]"
+                                className="size-[85.82px] hover:ring-0 active:ring-0 lg:size-[105px]"
                               >
                                 <AvatarImage src="/man.jpg" alt="Man" />
                                 <AvatarFallback>M</AvatarFallback>
@@ -1967,7 +1854,7 @@ export default function Landing() {
                             <div className="absolute bottom-[60.52px] lg:bottom-[74.04px] left-[147.63px] lg:left-[174.72px]">
                               <Avatar
                                 size="2xl"
-                                className="size-[85.82px] hover:ring-0 lg:size-[105px]"
+                                className="size-[85.82px] hover:ring-0 active:ring-0 lg:size-[105px]"
                               >
                                 <AvatarImage src="/woman.jpg" alt="Man" />
                                 <AvatarFallback>M</AvatarFallback>
@@ -1994,163 +1881,32 @@ export default function Landing() {
 
                           <div className="mt-1 flex justify-end relative">
                             <div className="inline-flex flex-col items-start gap-y-2.5 lg:gap-y-3">
-                              <TooltipProvider>
-                                <Tooltip>
-                                  <TooltipTrigger asChild>
-                                    <AvatarGroup
-                                      className="max-lg:-space-x-1"
-                                      size="sm"
-                                    >
-                                      <Avatar
-                                        size="sm"
-                                        className="border-2 max-lg:size-[26.16px] border-white hover:ring-0 active:ring-0"
-                                      >
-                                        <AvatarImage
-                                          src="/woman.jpg"
-                                          alt="Woman"
-                                        />
-                                        <AvatarFallback>W</AvatarFallback>
-                                      </Avatar>
-                                      <Avatar
-                                        size="sm"
-                                        className="border-2 max-lg:size-[26.16px] border-white hover:ring-0 active:ring-0"
-                                      >
-                                        <AvatarImage
-                                          src="/woman.jpg"
-                                          alt="Woman"
-                                        />
-                                        <AvatarFallback>W</AvatarFallback>
-                                      </Avatar>
-                                      <Avatar
-                                        size="sm"
-                                        className="border-2 max-lg:size-[26.16px] border-white hover:ring-0 active:ring-0"
-                                      >
-                                        <AvatarImage
-                                          src="/woman.jpg"
-                                          alt="Woman"
-                                        />
-                                        <AvatarFallback>W</AvatarFallback>
-                                      </Avatar>
-                                      <Avatar
-                                        size="sm"
-                                        className="border-2 max-lg:size-[26.16px] border-white hover:ring-0 active:ring-0"
-                                      >
-                                        <AvatarImage
-                                          src="/woman.jpg"
-                                          alt="Woman"
-                                        />
-                                        <AvatarFallback>W</AvatarFallback>
-                                      </Avatar>
-                                      <Avatar
-                                        size="sm"
-                                        className="border-2 max-lg:size-[26.16px] border-white hover:ring-0 active:ring-0"
-                                      >
-                                        <AvatarImage
-                                          src="/woman.jpg"
-                                          alt="Woman"
-                                        />
-                                        <AvatarFallback>W</AvatarFallback>
-                                      </Avatar>
-                                      <Avatar
-                                        size="sm"
-                                        className="border-2 max-lg:size-[26.16px] border-white hover:ring-0 active:ring-0"
-                                      >
-                                        <AvatarImage
-                                          src="/woman.jpg"
-                                          alt="Woman"
-                                        />
-                                        <AvatarFallback>W</AvatarFallback>
-                                      </Avatar>
-                                    </AvatarGroup>
-                                  </TooltipTrigger>
-                                  <TooltipContent className="p-0" size="md">
-                                    <ScrollArea
-                                      className="h-[192px] p-3 pr-4"
-                                      scrollBar={
-                                        <ScrollBar
-                                          className="w-4 p-1"
-                                          thumbClassName="bg-white/20"
-                                        />
-                                      }
-                                    >
-                                      <div className="space-y-3 pr-5">
-                                        <div className="flex items-center gap-x-2">
-                                          <Avatar className="hover:ring-0 active:ring-0">
-                                            <AvatarImage
-                                              src="/woman.jpg"
-                                              alt="Woman"
-                                            />
-                                            <AvatarFallback>W</AvatarFallback>
-                                          </Avatar>
-                                          <span className="text-xs font-medium leading-5">
-                                            Woman
-                                          </span>
-                                        </div>
-                                        <div className="flex items-center gap-x-2">
-                                          <Avatar className="hover:ring-0 active:ring-0">
-                                            <AvatarImage
-                                              src="/woman.jpg"
-                                              alt="Woman"
-                                            />
-                                            <AvatarFallback>W</AvatarFallback>
-                                          </Avatar>
-                                          <span className="text-xs font-medium leading-5">
-                                            Woman
-                                          </span>
-                                        </div>
-                                        <div className="flex items-center gap-x-2">
-                                          <Avatar className="hover:ring-0 active:ring-0">
-                                            <AvatarImage
-                                              src="/woman.jpg"
-                                              alt="Woman"
-                                            />
-                                            <AvatarFallback>W</AvatarFallback>
-                                          </Avatar>
-                                          <span className="text-xs font-medium leading-5">
-                                            Woman
-                                          </span>
-                                        </div>
-                                        <div className="flex items-center gap-x-2">
-                                          <Avatar className="hover:ring-0 active:ring-0">
-                                            <AvatarImage
-                                              src="/woman.jpg"
-                                              alt="Woman"
-                                            />
-                                            <AvatarFallback>W</AvatarFallback>
-                                          </Avatar>
-                                          <span className="text-xs font-medium leading-5">
-                                            Woman
-                                          </span>
-                                        </div>
-                                        <div className="flex items-center gap-x-2">
-                                          <Avatar className="hover:ring-0 active:ring-0">
-                                            <AvatarImage
-                                              src="/woman.jpg"
-                                              alt="Woman"
-                                            />
-                                            <AvatarFallback>W</AvatarFallback>
-                                          </Avatar>
-                                          <span className="text-xs font-medium leading-5">
-                                            Woman
-                                          </span>
-                                        </div>
-                                        <div className="flex items-center gap-x-2">
-                                          <Avatar className="hover:ring-0 active:ring-0">
-                                            <AvatarImage
-                                              src="/woman.jpg"
-                                              alt="Woman"
-                                            />
-                                            <AvatarFallback>W</AvatarFallback>
-                                          </Avatar>
-                                          <span className="text-xs font-medium leading-5">
-                                            Woman
-                                          </span>
-                                        </div>
-                                      </div>
-                                    </ScrollArea>
-                                  </TooltipContent>
-                                </Tooltip>
-                              </TooltipProvider>
+                              <AvatarGroup
+                                className="max-lg:-space-x-1"
+                                size="sm"
+                              >
+                                <Avatar
+                                  size="sm"
+                                  className="max-lg:size-[26.16px] hover:ring-0 active:ring-0"
+                                >
+                                  <AvatarImage src="/woman.jpg" alt="Woman" />
+                                  <AvatarFallback>W</AvatarFallback>
+                                </Avatar>
+                                <Avatar
+                                  size="sm"
+                                  className="max-lg:size-[26.16px] hover:ring-0 active:ring-0"
+                                >
+                                  <AvatarImage src="/woman.jpg" alt="Woman" />
+                                  <AvatarFallback>W</AvatarFallback>
+                                </Avatar>
+                                <Avatar
+                                  size="sm"
+                                  className="max-lg:size-[26.16px] hover:ring-0 active:ring-0"
+                                >
+                                  <AvatarImage src="/woman.jpg" alt="Woman" />
+                                  <AvatarFallback>W</AvatarFallback>
+                                </Avatar>
+                              </AvatarGroup>
 
                               <Button
                                 className="text-white group cursor-pointer max-lg:text-[10px] max-lg:gap-x-[5px] max-lg:gap-x-[5px]"
@@ -2208,7 +1964,7 @@ export default function Landing() {
               <div className="relative">
                 <div
                   className={cn(
-                    "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 3xl:grid-cols-5 gap-x-3 3xl:gap-x-3.5",
+                    "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 3xl:grid-cols-5 gap-3 3xl:gap-3.5",
                     {
                       "h-[558.26px] md:h-[688px] lg:h-[755px] overflow-hidden":
                         areTopSkillsNotVisible,
@@ -2467,7 +2223,7 @@ export default function Landing() {
 
                             <div className="flex items-center gap-x-[9.81px] lg:gap-x-3">
                               <Avatar
-                                className="size-[61.30px] lg:size-[75px]"
+                                className="size-[61.30px] hover:ring-0 active:ring-0 lg:size-[75px]"
                                 size="xl"
                               >
                                 <AvatarImage src="/man.jpg" alt="Man" />
@@ -2624,7 +2380,7 @@ export default function Landing() {
             <div className="grid md:grid-cols-2">
               <div className="bg-[#12B76A] max-md:h-[220px] relative overflow-hidden rounded-l-lg">
                 <Image
-                  className="object-contain object-center"
+                  className="object-contain object-[center_bottom]"
                   src="/lady-with-laptop.png"
                   alt="Lady with a laptop"
                   sizes="50vw"
@@ -2691,11 +2447,11 @@ export default function Landing() {
                   makes it easy to plan launch and see your project succeed.
                 </h3>
                 <Button
-                  className="bg-white cursor-pointer max-lg:h-9 max-lg:pr-3 max-lg:gap-x-1.5 max-lg:pl-4 max-lg:text-[13px] max-lg:leading-[19.62px] text-black hover:bg-primary-500 hover:text-white rounded-full"
+                  className="bg-white group cursor-pointer max-lg:h-9 max-lg:pr-3 max-lg:gap-x-1.5 max-lg:pl-4 max-lg:text-[13px] max-lg:leading-[19.62px] text-black hover:bg-primary-500 hover:text-white rounded-full"
                   size="xl"
                 >
                   Start Today{" "}
-                  <ArrowRight className="size-[14.71px] lg:size-[18px]" />
+                  <ArrowRight className="size-[14.71px] transition duration-300 group-hover:translate-x-1 lg:size-[18px]" />
                 </Button>
               </div>
             </div>
@@ -2878,9 +2634,9 @@ export default function Landing() {
             </h1>
             <div className="mt-[30px] lg:mt-[50px] grid lg:grid-cols-2 gap-y-[19.62px] lg:gap-x-6">
               <article className="rounded-[6.54px] lg:rounded-lg border overflow-hidden border-primary-500/25 flex md:flex-row flex-col lg:flex-col shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)]">
-                <div className="flex-auto relative shrink-0 h-[150px] max-md:w-full md:max-lg:w-[213px]">
+                <div className="flex-auto relative shrink-0 h-[150px] max-md:w-full overflow-hidden md:max-lg:w-[213px]">
                   <Image
-                    className="object-cover"
+                    className="object-cover transition-transform [transition-duration:3000ms] hover:scale-150 hover:rotate-3"
                     src="/opened-laptop.jpg"
                     alt="Laptop"
                     sizes="100vw"
@@ -2927,10 +2683,10 @@ export default function Landing() {
 
               <div className="flex flex-col gap-y-[19.62px] lg:gap-y-6">
                 <article className="flex md:flex-row flex-col rounded-[6.54px] lg:rounded-lg border border-primary-500/25 shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] overflow-hidden">
-                  <div className="relative max-md:h-[150px] max-md:w-full md:w-[213px] lg:w-[205px] shrink-0">
+                  <div className="relative max-md:h-[150px] max-md:w-full overflow-hidden md:w-[213px] lg:w-[205px] shrink-0">
                     <Image
                       src="/trading-chart.jpg"
-                      className="object-cover"
+                      className="object-cover transition-transform [transition-duration:3000ms] hover:scale-150 hover:rotate-3"
                       alt="Trading chart"
                       fill
                     />
@@ -2973,10 +2729,10 @@ export default function Landing() {
                   </div>
                 </article>
                 <article className="flex md:flex-row flex-col rounded-[6.54px] lg:rounded-lg border border-primary-500/25 shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] overflow-hidden">
-                  <div className="relative max-md:h-[150px] max-md:w-full md:w-[213px] lg:w-[205px] shrink-0">
+                  <div className="relative max-md:h-[150px] max-md:w-full overflow-hidden md:w-[213px] lg:w-[205px] shrink-0">
                     <Image
                       src="/trading-chart.jpg"
-                      className="object-cover"
+                      className="object-cover transition-transform [transition-duration:3000ms] hover:scale-150 hover:rotate-3"
                       alt="Trading chart"
                       fill
                     />
@@ -3019,10 +2775,10 @@ export default function Landing() {
                   </div>
                 </article>
                 <article className="flex md:flex-row flex-col rounded-[6.54px] lg:rounded-lg border border-primary-500/25 shadow-[0px_1.7px_3.4px_0px_rgba(16,24,40,.05)] overflow-hidden">
-                  <div className="relative max-md:h-[150px] max-md:w-full md:w-[213px] lg:w-[205px] shrink-0">
+                  <div className="relative max-md:h-[150px] max-md:w-full overflow-hidden md:w-[213px] lg:w-[205px] shrink-0">
                     <Image
                       src="/trading-chart.jpg"
-                      className="object-cover"
+                      className="object-cover transition-transform [transition-duration:3000ms] hover:scale-150 hover:rotate-3"
                       alt="Trading chart"
                       fill
                     />
@@ -3078,7 +2834,7 @@ export default function Landing() {
               </h1>
               <div
                 className={cn(
-                  "grid grid-cols-2 md:grid-cols-4 gap-x-3 lg:gap-x-[100px] mt-[30px] lg:mt-[100px]",
+                  "grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-[100px] mt-[30px] lg:mt-[100px]",
                   {
                     "h-[400px] lg:h-[488px] overflow-hidden":
                       areCategoriesNotVisible,
@@ -3316,11 +3072,11 @@ export default function Landing() {
                 <div className="lg:contents">
                   <div className="lg:mt-8 flex items-center gap-x-[19.62px] lg:gap-x-6">
                     <Button
-                      className="bg-white cursor-pointer max-lg:h-9 max-lg:px-3 max-lg:text-[13px] max-lg:leading-[19.62px] max-lg:gap-x-1 text-black hover:bg-primary-500 hover:text-white rounded-full"
+                      className="bg-white group cursor-pointer max-lg:h-9 max-lg:px-3 max-lg:text-[13px] max-lg:leading-[19.62px] max-lg:gap-x-1 text-black hover:bg-primary-500 hover:text-white rounded-full"
                       size="xl"
                     >
                       Sign up{" "}
-                      <ArrowRight className="size-[14.71px] lg:size-[15px]" />
+                      <ArrowRight className="size-[14.71px] group-hover:translate-x-1 transition duration-300 lg:size-[15px]" />
                     </Button>
                     <Button
                       className="rounded-full cursor-pointer max-lg:h-9 max-lg:px-3 max-lg:text-[13px] max-lg:leading-[19.62px] max-lg:gap-x-1 border-2 hover:bg-primary-500 shadow-[0px_1px_4px_0px_rgba(0,0,0,.03)] hover:border-primary-500 border-white text-white"

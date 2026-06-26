@@ -1079,14 +1079,14 @@ export default function Landing() {
                                 <AvatarGroup size="sm">
                                   <Avatar
                                     size="sm"
-                                    className="hover:ring-0 active:ring-0"
+                                    className="hover:ring-0 border-[3px] border-[#09132A] active:ring-0"
                                   >
                                     <AvatarImage src="/woman.jpg" alt="Woman" />
                                     <AvatarFallback>W</AvatarFallback>
                                   </Avatar>
                                   <Avatar
                                     size="sm"
-                                    className="hover:ring-0 active:ring-0"
+                                    className="hover:ring-0 border-[3px] border-[#09132A] active:ring-0"
                                   >
                                     <AvatarImage src="/woman.jpg" alt="Woman" />
                                     <AvatarFallback>W</AvatarFallback>
@@ -1964,7 +1964,7 @@ export default function Landing() {
               <div className="relative">
                 <div
                   className={cn(
-                    "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 3xl:grid-cols-5 gap-3 3xl:gap-3.5",
+                    "grid grid-cols-2 md:grid-cols-3 h-auto transition-[height] duration-300 lg:grid-cols-4 3xl:grid-cols-5 gap-3 3xl:gap-3.5",
                     {
                       "h-[558.26px] md:h-[688px] lg:h-[755px] overflow-hidden":
                         areTopSkillsNotVisible,
@@ -2834,7 +2834,7 @@ export default function Landing() {
               </h1>
               <div
                 className={cn(
-                  "grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-[100px] mt-[30px] lg:mt-[100px]",
+                  "grid grid-cols-2 md:grid-cols-4 gap-3 h-auto transition-[height] duration-300 lg:gap-[100px] mt-[30px] lg:mt-[100px]",
                   {
                     "h-[400px] lg:h-[488px] overflow-hidden":
                       areCategoriesNotVisible,
